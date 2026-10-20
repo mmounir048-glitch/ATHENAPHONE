@@ -76,15 +76,17 @@
 </head>
 <body class="bg-obsidian text-slate-100 antialiased selection:bg-gold selection:text-obsidian relative min-h-screen bg-luxury-grid">
 
-  <!-- Ambient Background Glow Orbs -->
-  <div class="ambient-orb w-[520px] h-[520px] bg-amber-500/10 top-[-120px] right-[-140px]"></div>
-  <div class="ambient-orb w-[480px] h-[480px] bg-cyan-500/10 top-[320px] left-[-160px]"></div>
-  <div class="ambient-orb w-[600px] h-[600px] bg-amber-500/8 bottom-[15%] right-[10%]"></div>
+  <!-- Ambient Background Glow Orbs (Contained to prevent mobile horizontal bleed) -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="ambient-orb w-[520px] h-[520px] bg-amber-500/10 top-[-120px] right-[-140px]"></div>
+    <div class="ambient-orb w-[480px] h-[480px] bg-cyan-500/10 top-[320px] left-[-160px]"></div>
+    <div class="ambient-orb w-[600px] h-[600px] bg-amber-500/8 bottom-[15%] right-[10%]"></div>
+  </div>
 
   <!-- ========================================================================
        STICKY LUXURY HEADER / NAVBAR (APPLE PRO GLASS STYLE)
        ======================================================================== -->
-  <header id="mainAppHeader" class="sticky top-0 z-50 border-b border-white/10 bg-[#05070b]/85 backdrop-blur-2xl">
+  <header id="mainAppHeader" class="sticky top-0 z-50 border-b border-white/10 bg-[#05070b]/85 backdrop-blur-2xl w-full max-w-full box-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-4">
       
       <!-- Brand Identity -->
@@ -145,7 +147,7 @@
   <!-- ========================================================================
        HERO SECTION WITH INTERACTIVE BEFORE/AFTER SCREEN RESTORATION SLIDER
        ======================================================================== -->
-  <section id="hero-slider" class="relative pt-8 pb-20 lg:pt-14 lg:pb-24 overflow-hidden">
+  <section id="hero-slider" class="relative pt-8 pb-20 lg:pt-14 lg:pb-24 overflow-hidden w-full max-w-full box-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
@@ -380,22 +382,111 @@
 
                   <div class="cracked-glass-tint"></div>
 
+                  <!-- Photorealistic Shattered Ceramic Shield / Gorilla Glass Overlay -->
                   <svg class="crack-svg-overlay" viewBox="0 0 310 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                    <circle cx="225" cy="195" r="5" fill="rgba(255,255,255,0.65)" />
-                    <circle cx="225" cy="195" r="14" stroke="rgba(255,255,255,0.75)" stroke-width="1.2" stroke-dasharray="4 2" />
-                    <circle cx="225" cy="195" r="28" stroke="rgba(255,255,255,0.55)" stroke-width="1" />
-                    <circle cx="225" cy="195" r="48" stroke="rgba(255,255,255,0.4)" stroke-width="0.9" />
-                    <path d="M225 195 L310 45 M225 195 L295 135 L310 128 M225 195 L310 215 M225 195 L285 310 L310 355 M225 195 L210 380 L245 520 L310 630 M225 195 L145 290 L75 430 L0 535 M225 195 L110 215 L25 245 L0 260 M225 195 L130 130 L40 65 L0 20 M225 195 L195 75 L175 0" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round"/>
-                    <path d="M226 196 L310 46 M226 196 L286 311 L310 356 M226 196 L211 381 L246 521 M226 196 L146 291 L76 431 M226 196 L111 216 L26 246 M226 196 L131 131 L41 66" stroke="rgba(186,230,253,0.45)" stroke-width="0.8" />
-                    <path d="M195 75 L265 95 L295 135 L290 210 L260 270 L215 295 L145 290 L110 215 L130 130 Z" stroke="rgba(255,255,255,0.55)" stroke-width="1" />
-                    <path d="M178 30 L285 65 L305 165 L275 300 L210 365 L105 355 L65 230 L85 95 Z" stroke="rgba(255,255,255,0.42)" stroke-width="0.9" />
-                    <circle cx="88" cy="465" r="4" fill="rgba(255,255,255,0.6)" />
-                    <circle cx="88" cy="465" r="18" stroke="rgba(255,255,255,0.65)" stroke-width="1.1" />
-                    <circle cx="88" cy="465" r="38" stroke="rgba(255,255,255,0.45)" stroke-width="0.8" />
-                    <path d="M88 465 L0 390 M88 465 L0 480 M88 465 L15 610 L0 645 M88 465 L95 650 M88 465 L185 620 L215 650 M88 465 L245 520 M88 465 L210 380 M88 465 L75 310 L0 190" stroke="rgba(255,255,255,0.78)" stroke-width="1.35" />
-                    <path d="M145 290 L180 335 L210 380 M110 215 L75 310 L145 290 M245 520 L165 555 L92 575 L15 610 M40 65 L85 155 L25 245 M285 310 L240 425 L310 470" stroke="rgba(255,255,255,0.48)" stroke-width="0.85" stroke-dasharray="18 3 8 2" />
-                    <polygon points="220,192 232,188 229,203" fill="rgba(255,255,255,0.35)" />
-                    <polygon points="84,462 94,459 91,472" fill="rgba(255,255,255,0.35)" />
+                    <!-- Semi-transparent Specular Glass Facet Shards (3D light glints) -->
+                    <g opacity="0.85">
+                      <polygon points="235,175 248,142 222,135 228,162" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+                      <polygon points="235,175 252,208 220,225 224,195" fill="rgba(224,242,254,0.18)" stroke="rgba(255,255,255,0.35)" stroke-width="0.5"/>
+                      <polygon points="198,190 165,212 178,185 202,176" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+                      <polygon points="262,118 285,62 270,95" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+                      <polygon points="185,295 210,338 178,328" fill="rgba(224,242,254,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="0.5"/>
+                      <polygon points="158,360 135,420 165,408" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="0.5"/>
+                      <polygon points="235,175 225,182 230,190 238,184" fill="rgba(255,255,255,0.45)"/>
+                      <polygon points="235,175 242,168 238,162 231,168" fill="rgba(255,255,255,0.5)"/>
+                    </g>
+
+                    <!-- LAYER 1: Dark Occlusion Shadows (Deep Fractures Beneath Glass) -->
+                    <g stroke="rgba(0,0,0,0.85)" stroke-linecap="round" stroke-linejoin="round">
+                      <!-- Fissure 1: Top-Right chasm -->
+                      <path d="M235 175 L248 142 L262 118 L270 95 L285 62 L300 35 L310 18" stroke-width="2.2"/>
+                      <path d="M262 118 L282 126 L310 134" stroke-width="1.8"/>
+                      <path d="M285 62 L298 74 L310 80" stroke-width="1.6"/>
+                      <!-- Fissure 2: Top chasm towards left -->
+                      <path d="M235 175 L218 138 L205 102 L194 68 L188 30 L182 0" stroke-width="2.2"/>
+                      <path d="M205 102 L178 88 L150 72 L122 58 L85 32 L50 0" stroke-width="1.8"/>
+                      <path d="M178 88 L192 60 L198 38" stroke-width="1.4"/>
+                      <path d="M150 72 L162 42 L168 15" stroke-width="1.4"/>
+                      <!-- Fissure 3: Left diagonal fault lines -->
+                      <path d="M235 175 L198 190 L162 212 L128 230 L96 248 L58 272 L24 290 L0 305" stroke-width="2.4"/>
+                      <path d="M162 212 L138 185 L108 160 L74 138 L32 110 L0 92" stroke-width="1.8"/>
+                      <path d="M96 248 L78 295 L55 345 L32 410 L12 475 L0 520" stroke-width="1.8"/>
+                      <path d="M128 230 L115 270 L96 298 L82 355 L58 395" stroke-width="1.4"/>
+                      <!-- Fissure 4: Right flank fault lines -->
+                      <path d="M235 175 L252 208 L268 252 L282 302 L295 358 L305 408 L310 438" stroke-width="2.2"/>
+                      <path d="M268 252 L292 265 L310 272" stroke-width="1.6"/>
+                      <path d="M282 302 L302 332 L310 348" stroke-width="1.5"/>
+                      <!-- Fissure 5: Long downward transverse fracture -->
+                      <path d="M235 175 L215 235 L185 295 L158 360 L135 420 L112 485 L90 550 L72 610 L60 650" stroke-width="2.4"/>
+                      <path d="M185 295 L210 338 L235 392 L255 452 L278 528 L298 598 L310 632" stroke-width="2.0"/>
+                      <path d="M135 420 L165 455 L195 500 L225 558 L245 618 L255 650" stroke-width="1.8"/>
+                      <path d="M112 485 L78 515 L45 555 L20 595 L0 625" stroke-width="1.7"/>
+                      <!-- Secondary Edge Fracture (Bottom Left) -->
+                      <path d="M0 575 L28 585 L58 610 L82 650" stroke-width="2.0"/>
+                      <path d="M28 585 L18 625 L12 650" stroke-width="1.6"/>
+                      <path d="M28 585 L45 555" stroke-width="1.4"/>
+                    </g>
+
+                    <!-- LAYER 2: Bright Specular Ceramic Shield Refraction (White & Ice-Cyan) -->
+                    <g stroke="rgba(255,255,255,0.92)" stroke-linecap="round" stroke-linejoin="round">
+                      <!-- Fissure 1: Top-Right chasm highlight -->
+                      <path d="M235 175 L248 142 L262 118 L270 95 L285 62 L300 35 L310 18" stroke-width="1.2"/>
+                      <path d="M262 118 L282 126 L310 134" stroke-width="0.9"/>
+                      <path d="M285 62 L298 74 L310 80" stroke-width="0.8"/>
+                      <!-- Fissure 2: Top chasm highlight -->
+                      <path d="M235 175 L218 138 L205 102 L194 68 L188 30 L182 0" stroke-width="1.2"/>
+                      <path d="M205 102 L178 88 L150 72 L122 58 L85 32 L50 0" stroke-width="0.9"/>
+                      <path d="M178 88 L192 60 L198 38" stroke-width="0.7"/>
+                      <path d="M150 72 L162 42 L168 15" stroke-width="0.7"/>
+                      <!-- Fissure 3: Left diagonal highlight -->
+                      <path d="M235 175 L198 190 L162 212 L128 230 L96 248 L58 272 L24 290 L0 305" stroke-width="1.3"/>
+                      <path d="M162 212 L138 185 L108 160 L74 138 L32 110 L0 92" stroke-width="0.9"/>
+                      <path d="M96 248 L78 295 L55 345 L32 410 L12 475 L0 520" stroke-width="0.9"/>
+                      <path d="M128 230 L115 270 L96 298 L82 355 L58 395" stroke-width="0.7"/>
+                      <!-- Fissure 4: Right flank highlight -->
+                      <path d="M235 175 L252 208 L268 252 L282 302 L295 358 L305 408 L310 438" stroke-width="1.2"/>
+                      <path d="M268 252 L292 265 L310 272" stroke-width="0.8"/>
+                      <path d="M282 302 L302 332 L310 348" stroke-width="0.8"/>
+                      <!-- Fissure 5: Long downward transverse highlight -->
+                      <path d="M235 175 L215 235 L185 295 L158 360 L135 420 L112 485 L90 550 L72 610 L60 650" stroke-width="1.3"/>
+                      <path d="M185 295 L210 338 L235 392 L255 452 L278 528 L298 598 L310 632" stroke-width="1.1"/>
+                      <path d="M135 420 L165 455 L195 500 L225 558 L245 618 L255 650" stroke-width="0.9"/>
+                      <path d="M112 485 L78 515 L45 555 L20 595 L0 625" stroke-width="0.9"/>
+                      <!-- Secondary Edge Fracture Highlight -->
+                      <path d="M0 575 L28 585 L58 610 L82 650" stroke-width="1.1"/>
+                      <path d="M28 585 L18 625 L12 650" stroke-width="0.8"/>
+                      <path d="M28 585 L45 555" stroke-width="0.8"/>
+                    </g>
+
+                    <!-- LAYER 3: Micro-Hairline Glass Stress Fractures (Razor Thin Glints) -->
+                    <g stroke="rgba(186,230,253,0.7)" stroke-linecap="round" stroke-width="0.5">
+                      <path d="M228 162 L208 152 L195 138" />
+                      <path d="M248 142 L242 120 L230 105" />
+                      <path d="M252 208 L240 228 L228 245" />
+                      <path d="M198 190 L188 172 L172 165" />
+                      <path d="M162 212 L175 240 L168 268" />
+                      <path d="M185 295 L165 315 L145 325" />
+                      <path d="M210 338 L228 355 L235 380" />
+                      <path d="M158 360 L178 385 L192 420" />
+                      <path d="M135 420 L115 440 L98 448" />
+                      <path d="M90 550 L110 570 L125 595" />
+                      <path d="M235 392 L215 415 L205 440" />
+                      <path d="M255 452 L240 480 L230 510" />
+                    </g>
+
+                    <!-- Authentic Crushed Impact Epicenter (Micro-shatter Stippling) -->
+                    <circle cx="235" cy="175" r="3.2" fill="#ffffff" filter="drop-shadow(0 0 4px #bae6fd)"/>
+                    <circle cx="233" cy="173" r="1.5" fill="#bae6fd"/>
+                    <circle cx="237" cy="177" r="1.2" fill="#ffffff"/>
+                    <circle cx="239" cy="172" r="0.9" fill="#ffffff"/>
+                    <circle cx="231" cy="178" r="0.8" fill="#bae6fd"/>
+                    <circle cx="235" cy="170" r="1.0" fill="#ffffff"/>
+                    <circle cx="238" cy="179" r="1.1" fill="#bae6fd"/>
+                    <!-- Tiny Micro-Shards Radiating from Core -->
+                    <polygon points="236,172 239,170 238,174" fill="#ffffff"/>
+                    <polygon points="233,176 231,179 235,178" fill="#ffffff"/>
+                    <polygon points="232,172 229,174 231,176" fill="#e0f2fe"/>
+                    <polygon points="237,175 240,177 238,178" fill="#e0f2fe"/>
                   </svg>
                 </div>
 
@@ -425,7 +516,7 @@
   <!-- ========================================================================
        APPLE.COM STYLE BENTO GRID SHOWCASE (الأجهزة والتقنيات المدعومة)
        ======================================================================== -->
-  <section id="apple-bento" class="py-16 relative border-t border-white/10">
+  <section id="apple-bento" class="py-16 relative border-t border-white/10 overflow-hidden w-full max-w-full box-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
@@ -534,7 +625,7 @@
   <!-- ========================================================================
        INTERACTIVE DZD SAVINGS CALCULATOR SECTION (+180 MODELS + LIVE SEARCH)
        ======================================================================== -->
-  <section id="calculator" class="py-20 relative border-t border-white/10 bg-[#070a12]/70">
+  <section id="calculator" class="py-20 relative border-t border-white/10 bg-[#070a12]/70 overflow-hidden w-full max-w-full box-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Heading -->
@@ -584,21 +675,34 @@
             </div>
 
             <!-- Master Brand Tabs (Level 1) -->
-            <div id="brandTabsContainer" class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-2 -mx-1 px-1">
+            <div id="brandTabsContainer" class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-2 w-full max-w-full box-border px-0.5">
               <button type="button" data-brand="apple" class="brand-tab active rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
-                <span class="text-base">🍏</span>
+                <svg class="w-4 h-4 sm:w-[18px] sm:h-[18px] shrink-0 fill-current" viewBox="0 0 170 170">
+                  <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.58-7.7-11.64-13.98-5.77-8.91-10.27-18.91-13.5-30-3.23-11.09-4.85-21.75-4.85-31.98 0-14.57 3.73-26.47 11.19-35.7 7.46-9.23 16.79-13.96 27.99-14.2 5.01 0 10.37 1.25 16.08 3.75 5.71 2.5 9.77 3.82 12.18 3.96 1.85-.27 6.13-1.68 12.84-4.23 6.71-2.55 12.44-3.66 17.19-3.32 13.06 1.04 23.36 5.86 30.9 14.46-11.33 6.84-16.89 16.27-16.68 28.3.22 9.46 3.9 17.37 11.04 23.73 7.14 6.36 15.54 10.02 25.21 10.99-2.28 6.96-4.78 13.29-7.5 18.99zm-31.84-108.92c0 7.84-2.82 15.19-8.46 22.05-6.74 8.05-15.02 12.69-24.84 13.93-.22-1.3-.33-2.4-.33-3.27 0-7.62 3.05-15.22 9.15-22.8 6.1-7.58 13.78-12.17 23.05-13.77.98 1.2 1.43 2.5 1.43 3.86z"/>
+                </svg>
                 <span>Apple</span>
               </button>
               <button type="button" data-brand="samsung" class="brand-tab rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
-                <span class="text-base">🪐</span>
+                <svg class="h-3 sm:h-3.5 w-auto shrink-0 fill-current" viewBox="0 0 160 30" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.8 6.5C9.8 4.7 5.8 5.4 3.7 8.2c-2.3 3.1-1.3 7.5 2 9.5 3.3 2 9.4 3.3 9.4 6.6 0 2.2-1.8 3.7-4.4 3.7-3 0-5.7-1.5-7.7-3.8L0 27.5c2.9 3.2 7 4.9 11.4 4.9 5.8 0 10.5-3.6 10.5-9.1 0-7.3-10.2-7.8-10.2-11.2 0-1.7 1.5-3 3.6-3 2.5 0 4.8 1.2 6.6 3.1l2.8-2.9C21.7 6.3 17.5 4.7 12.8 6.5zM36.2 5.2h-5.4L23 31.9h5.8l1.6-5.1h7.5l1.6 5.1h5.9L36.2 5.2zm-4.3 17.1l2.3-7.5 2.3 7.5h-4.6zM70.1 5.2h-5.7l-5.6 15.6L53.2 5.2h-5.7v26.7h5.2V14.1l4.9 14.1h3.6l4.9-14.1v17.8h5.2V5.2h-1.2zm14.3 1.3C81.4 4.7 77.4 5.4 75.3 8.2c-2.3 3.1-1.3 7.5 2 9.5 3.3 2 9.4 3.3 9.4 6.6 0 2.2-1.8 3.7-4.4 3.7-3 0-5.7-1.5-7.7-3.8l-3 3.3c2.9 3.2 7 4.9 11.4 4.9 5.8 0 10.5-3.6 10.5-9.1 0-7.3-10.2-7.8-10.2-11.2 0-1.7 1.5-3 3.6-3 2.5 0 4.8 1.2 6.6 3.1l2.8-2.9c-3-3-7.2-4.6-11.9-2.8zM108.9 5.2h-5.7v17.4c0 3-1.9 4.7-4.6 4.7-2.7 0-4.6-1.7-4.6-4.7V5.2h-5.7v17.4c0 6.2 4.4 9.8 10.3 9.8 5.9 0 10.3-3.6 10.3-9.8V5.2zm27.4 0h-5.5l-9.8 17.6V5.2h-5.4v26.7h5.5l9.8-17.6v17.6h5.4V5.2zm20.8 13.1v-2.3h-7.7v-5.9h9.1V5.2h-14.8v26.7h14.8v-4.9h-9.1v-8.7h7.7z"/>
+                </svg>
                 <span>Samsung</span>
               </button>
               <button type="button" data-brand="xiaomi_poco" class="brand-tab rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
-                <span class="text-base">⚡</span>
+                <span class="inline-flex items-center gap-1.5 shrink-0">
+                  <svg class="w-4 h-4 sm:w-[18px] sm:h-[18px] fill-current" viewBox="0 0 24 24">
+                    <path d="M0 4.5A4.5 4.5 0 0 1 4.5 0h15A4.5 4.5 0 0 1 24 4.5v15a4.5 4.5 0 0 1-4.5 4.5h-15A4.5 4.5 0 0 1 0 19.5v-15zm6.8 5.2v9.3h2.6v-6.7h2.2v6.7h2.6v-9.3H6.8zm10.4 0v9.3h2.6v-9.3h-2.6z"/>
+                  </svg>
+                  <span class="font-black tracking-tighter text-[10px] sm:text-[11px] font-en px-1 py-0.5 rounded bg-amber-400 text-obsidian leading-none">POCO</span>
+                </span>
                 <span>Xiaomi & POCO</span>
               </button>
               <button type="button" data-brand="other" class="brand-tab rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
-                <span class="text-base">📱</span>
+                <svg class="w-4 h-4 sm:w-[18px] sm:h-[18px] shrink-0 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="5" y="2" width="14" height="20" rx="3" stroke-width="2"/>
+                  <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="9" y1="5" x2="15" y2="5" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
                 <span>أجهزة أخرى (Infinix, Realme)</span>
               </button>
             </div>
@@ -615,7 +719,7 @@
             </div>
 
             <!-- Level 2 Sub-Filter Chips -->
-            <div id="subSeriesPillsContainer" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 -mx-1 px-1">
+            <div id="subSeriesPillsContainer" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full max-w-full box-border px-0.5">
               <!-- Populated dynamically by script.js -->
             </div>
 
@@ -624,7 +728,7 @@
               <div class="text-[11px] text-slate-400 font-semibold flex items-center gap-1">
                 <span>تصفية جيل الآيفون:</span>
               </div>
-              <div id="iphoneGenPillsContainer" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 -mx-1 px-1">
+              <div id="iphoneGenPillsContainer" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 w-full max-w-full box-border px-0.5">
                 <!-- Populated dynamically by script.js: [الكل], [17 & 18], [15 & 16], [13 & 14], [11 & 12], [X & أقدم] -->
               </div>
             </div>
@@ -780,7 +884,7 @@
   <!-- ========================================================================
        PROCESS SHOWCASE: DYNAMIC 4-STEP OCA RESTORATION WORKBENCH
        ======================================================================== -->
-  <section id="oca-process" class="py-16 sm:py-24 relative border-t border-white/10">
+  <section id="oca-process" class="py-16 sm:py-24 relative border-t border-white/10 overflow-hidden w-full max-w-full box-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header with Title & Auto-Play / Navigation Controls -->
@@ -819,7 +923,7 @@
       </div>
 
       <!-- 4 Interactive Step Selector Tabs (Touch-scrollable on mobile) -->
-      <div class="flex items-center gap-3 overflow-x-auto no-scrollbar pb-3 mb-8 -mx-1 px-1" id="ocaStepsGrid">
+      <div class="flex items-center gap-3 overflow-x-auto no-scrollbar pb-3 mb-8 w-full max-w-full box-border px-0.5" id="ocaStepsGrid">
         <button type="button" data-step="1" class="workbench-step-tab active shrink-0 glass-panel rounded-2xl p-3.5 sm:p-4 text-right flex items-center gap-3 min-w-[220px] sm:flex-1 cursor-pointer">
           <span class="step-num-pill w-8 h-8 rounded-xl bg-white/10 font-en font-black text-xs sm:text-sm flex items-center justify-center transition shrink-0">01</span>
           <div>
@@ -933,7 +1037,7 @@
   <!-- ========================================================================
        APPLE TRADE-IN STYLE INTERACTIVE SCREEN SELF-DIAGNOSTIC QUIZ (#eligibility)
        ======================================================================== -->
-  <section id="eligibility" class="py-20 relative border-t border-white/10 bg-[#070a12]/60">
+  <section id="eligibility" class="py-20 relative border-t border-white/10 bg-[#070a12]/60 overflow-hidden w-full max-w-full box-border">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
         <span class="font-en text-xs font-bold text-cyan-300 tracking-widest uppercase">APPLE-STYLE SMART DIAGNOSTIC</span>
@@ -1003,7 +1107,7 @@
   <!-- ========================================================================
        BRANCH INFORMATION & DIRECT GOOGLE MAPS (سوق بيلفور & الكاليتوس)
        ======================================================================== -->
-  <section id="branches" class="py-20 relative border-t border-white/10">
+  <section id="branches" class="py-20 relative border-t border-white/10 overflow-hidden w-full max-w-full box-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
@@ -1127,7 +1231,7 @@
   <!-- ========================================================================
        LUXURY FOOTER + GOOGLE SHEETS SYNC MANAGER TRIGGER
        ======================================================================== -->
-  <footer class="border-t border-white/10 bg-[#030508] py-12 pb-24 sm:pb-12">
+  <footer class="border-t border-white/10 bg-[#030508] py-12 pb-24 sm:pb-12 overflow-hidden w-full max-w-full box-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl glass-panel-gold flex items-center justify-center font-en font-black text-gold">A</div>

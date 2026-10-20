@@ -193,21 +193,21 @@ const PHONE_DATABASE = {
     { id: 'ip16', subCategory: 'iphone', gen: '15_16', series: '16 & 15', name: 'iPhone 16', panel: 'Super Retina XDR OLED • Dynamic Island', marketPrice: 60000, athenaPrice: 17000, time: '60 - 90 دقيقة' },
 
     // iPhone 15 Series
-    { id: 'ip15pm', subCategory: 'iphone', gen: '15_16', series: '16 & 15', name: 'iPhone 15 Pro Max', panel: 'LTPO Super Retina XDR OLED • 120Hz', marketPrice: 70000, athenaPrice: 19500, time: '60 - 90 دقيقة' },
-    { id: 'ip15p', subCategory: 'iphone', gen: '15_16', series: '16 & 15', name: 'iPhone 15 Pro', panel: 'LTPO Super Retina XDR OLED • 120Hz', marketPrice: 62000, athenaPrice: 17500, time: '60 - 90 دقيقة' },
+    { id: 'ip15pm', subCategory: 'iphone', gen: '15_16', series: '16 & 15', name: 'iPhone 15 Pro Max', panel: 'LTPO Super Retina XDR OLED • 120Hz', marketPrice: 72000, athenaPrice: 23000, time: '60 - 90 دقيقة' },
+    { id: 'ip15p', subCategory: 'iphone', gen: '15_16', series: '16 & 15', name: 'iPhone 15 Pro', panel: 'LTPO Super Retina XDR OLED • 120Hz', marketPrice: 58000, athenaPrice: 18000, time: '60 - 90 دقيقة' },
     { id: 'ip15plus', subCategory: 'iphone', gen: '15_16', series: '16 & 15', name: 'iPhone 15 Plus', panel: 'Super Retina XDR OLED • Dynamic Island', marketPrice: 52000, athenaPrice: 15000, time: '60 دقيقة' },
     { id: 'ip15', subCategory: 'iphone', gen: '15_16', series: '16 & 15', name: 'iPhone 15', panel: 'Super Retina XDR OLED • Dynamic Island', marketPrice: 48000, athenaPrice: 14000, time: '60 دقيقة' },
 
     // iPhone 14 Series
     { id: 'ip14pm', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 14 Pro Max', panel: 'LTPO Super Retina XDR OLED • 120Hz', marketPrice: 65000, athenaPrice: 16000, time: '60 - 90 دقيقة' },
     { id: 'ip14p', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 14 Pro', panel: 'LTPO Super Retina XDR OLED • 120Hz', marketPrice: 55000, athenaPrice: 12500, time: '60 دقيقة' },
-    { id: 'ip14plus', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 14 Plus', panel: 'Super Retina XDR OLED • True Tone', marketPrice: 42000, athenaPrice: 11000, time: '60 دقيقة' },
+    { id: 'ip14plus', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 14 Plus', panel: 'Super Retina XDR OLED • True Tone', marketPrice: 42000, athenaPrice: 13000, time: '60 دقيقة' },
     { id: 'ip14', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 14', panel: 'Super Retina XDR OLED • True Tone', marketPrice: 35000, athenaPrice: 9000, time: '60 دقيقة' },
 
     // iPhone 13 Series
     { id: 'ip13pm', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 13 Pro Max', panel: 'Super Retina XDR OLED • 120Hz ProMotion', marketPrice: 52000, athenaPrice: 13500, time: '60 دقيقة' },
     { id: 'ip13p', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 13 Pro', panel: 'Super Retina XDR OLED • 120Hz ProMotion', marketPrice: 48000, athenaPrice: 10500, time: '60 دقيقة' },
-    { id: 'ip13', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 13', panel: 'Super Retina XDR OLED • True Tone', marketPrice: 32000, athenaPrice: 8500, time: '60 دقيقة' },
+    { id: 'ip13', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 13', panel: 'Super Retina XDR OLED • True Tone', marketPrice: 28000, athenaPrice: 8000, time: '60 دقيقة' },
     { id: 'ip13mini', subCategory: 'iphone', gen: '13_14', series: '14 & 13', name: 'iPhone 13 mini', panel: 'Super Retina XDR OLED • True Tone', marketPrice: 28000, athenaPrice: 8000, time: '60 دقيقة' },
 
     // iPhone 12 Series
@@ -253,20 +253,20 @@ const PHONE_DATABASE = {
     // Serie S & Note (Curved & Flagship)
     { id: 's25u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S25 Ultra', panel: 'Dynamic LTPO AMOLED 2X • 120Hz Gorilla Armor', marketPrice: 74000, athenaPrice: 21000, time: '90 دقيقة' },
     { id: 's25plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S25+ / S25', panel: 'Dynamic LTPO AMOLED 2X • 120Hz', marketPrice: 54000, athenaPrice: 15500, time: '60 - 90 دقيقة' },
-    { id: 's24u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S24 Ultra', panel: 'Dynamic LTPO AMOLED 2X • 120Hz Anti-Glare', marketPrice: 64000, athenaPrice: 18000, time: '90 دقيقة' },
+    { id: 's24u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S24 Ultra', panel: 'Dynamic LTPO AMOLED 2X • 120Hz Anti-Glare', marketPrice: 85000, athenaPrice: 28000, time: '90 دقيقة' },
     { id: 's24plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S24+ / S24', panel: 'Dynamic LTPO AMOLED 2X • 120Hz', marketPrice: 44000, athenaPrice: 12500, time: '60 - 90 دقيقة' },
     { id: 's24fe', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S24 FE / S23 FE', panel: 'Dynamic AMOLED 2X • 120Hz', marketPrice: 34000, athenaPrice: 10000, time: '60 دقيقة' },
-    { id: 's23u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S23 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz S-Pen', marketPrice: 54000, athenaPrice: 15500, time: '90 دقيقة' },
+    { id: 's23u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S23 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz S-Pen', marketPrice: 68000, athenaPrice: 23000, time: '90 دقيقة' },
     { id: 's23plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S23+ / S23', panel: 'Dynamic AMOLED 2X • 120Hz', marketPrice: 39000, athenaPrice: 11000, time: '60 دقيقة' },
-    { id: 's22u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S22 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz S-Pen', marketPrice: 46000, athenaPrice: 13500, time: '90 دقيقة' },
+    { id: 's22u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S22 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz S-Pen', marketPrice: 55000, athenaPrice: 19000, time: '90 دقيقة' },
     { id: 's22plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S22+ / S22', panel: 'Dynamic AMOLED 2X • 120Hz', marketPrice: 33000, athenaPrice: 9500, time: '60 دقيقة' },
-    { id: 's21u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S21 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz', marketPrice: 40000, athenaPrice: 12000, time: '90 دقيقة' },
+    { id: 's21u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S21 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz', marketPrice: 45000, athenaPrice: 16000, time: '90 دقيقة' },
     { id: 's21plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S21+ / S21 / S21 FE', panel: 'Dynamic AMOLED 2X • 120Hz', marketPrice: 29000, athenaPrice: 8500, time: '60 دقيقة' },
-    { id: 's20u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S20 Ultra / S20+ / S20', panel: 'Dynamic AMOLED 2X Curved • 120Hz', marketPrice: 34000, athenaPrice: 10500, time: '90 دقيقة' },
+    { id: 's20u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S20 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz', marketPrice: 38000, athenaPrice: 14000, time: '90 دقيقة' },
     { id: 's20fe', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S20 FE', panel: 'Super AMOLED • 120Hz Flat', marketPrice: 23000, athenaPrice: 7000, time: '60 دقيقة' },
     { id: 's10plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S10+ / S10 / S10e', panel: 'Dynamic AMOLED Curved • Ultrasonic FP', marketPrice: 28000, athenaPrice: 9000, time: '90 دقيقة' },
     { id: 's9plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy S9+ / S9 / S8+ / S8', panel: 'Super AMOLED Curved Edge', marketPrice: 21000, athenaPrice: 7500, time: '90 دقيقة' },
-    { id: 'note20u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy Note 20 Ultra / Note 20', panel: 'Dynamic AMOLED 2X Curved • 120Hz S-Pen', marketPrice: 44000, athenaPrice: 13000, time: '90 دقيقة' },
+    { id: 'note20u', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy Note 20 Ultra', panel: 'Dynamic AMOLED 2X Curved • 120Hz S-Pen', marketPrice: 48000, athenaPrice: 16500, time: '90 دقيقة' },
     { id: 'note10plus', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy Note 10+ / Note 10', panel: 'Dynamic AMOLED Curved • S-Pen', marketPrice: 34000, athenaPrice: 10500, time: '90 دقيقة' },
     { id: 'note9', subCategory: 's_note', series: 'Serie S & Note', name: 'Galaxy Note 9 / Note 8', panel: 'Super AMOLED Curved • S-Pen', marketPrice: 24000, athenaPrice: 8000, time: '90 دقيقة' },
 
@@ -352,9 +352,9 @@ const PHONE_DATABASE = {
 
 const BRAND_SUB_FILTERS = {
   apple: [
-    { key: 'iphone', label: 'هواتف iPhone 📱' },
-    { key: 'ipad', label: 'Apple iPad 💻' },
-    { key: 'watch', label: 'Apple Watch ⌚' }
+    { key: 'iphone', label: 'هواتف iPhone' },
+    { key: 'ipad', label: 'Apple iPad' },
+    { key: 'watch', label: 'Apple Watch' }
   ],
   samsung: [
     { key: 'ALL', label: 'الكل' },
@@ -420,7 +420,7 @@ function initSavingsCalculator() {
   let currentIphoneGen = 'ALL';
   let currentModel = PHONE_DATABASE.apple[12]; // Default: iPhone 15 Pro Max
   let currentBranch = 'سوق بيلفور (الحراش)';
-  let previousSavedVal = 50500;
+  let previousSavedVal = 49000;
 
   function formatDZD(num) {
     return Number(num).toLocaleString('en-US');
