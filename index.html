@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATHENA PHONE | المختبر الأول لتغيير زجاج الشاشات بتقنية OCA في الجزائر</title>
+  <meta name="description" content="أثينا فون (ATHENA PHONE) - المتخصصون في تغيير زجاج الهواتف الذكية وساعات أبل والآيباد مع الحفاظ على الشاشة الأصلية 100% بتقنية OCA المخبرية. سوق بيلفور والكاليتوس - 0540899574." />
+
+  <!-- Google Fonts: Cairo, Tajawal & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'Tajawal', 'sans-serif'],
+            en: ['Space Grotesk', 'Cairo', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#05070b',
+            charcoal: '#0b0f17',
+            gold: {
+              DEFAULT: '#d4af37',
+              light: '#f5e6b3',
+              dark: '#9a7b1c',
+            },
+            laser: {
+              DEFAULT: '#00f0ff',
+              dark: '#0088ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=3.0" />
+
+  <!-- Meta Pixel & Marketing Tracking Engine -->
+  <script>
+    window.ATHENA_META_PIXEL_ID = localStorage.getItem('athena_meta_pixel_id') || '';
+    window.ATHENA_TIKTOK_PIXEL_ID = localStorage.getItem('athena_tiktok_pixel_id') || '';
+
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    if (window.ATHENA_META_PIXEL_ID) {
+      fbq('init', window.ATHENA_META_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+
+    // Universal Event Tracker for Ads & Analytics
+    window.trackAthenaEvent = function(eventName, eventParams) {
+      if (typeof fbq === 'function' && window.ATHENA_META_PIXEL_ID) {
+        fbq('track', eventName, eventParams || {});
+      }
+      if (typeof ttq === 'object' && typeof ttq.track === 'function' && window.ATHENA_TIKTOK_PIXEL_ID) {
+        ttq.track(eventName, eventParams || {});
+      }
+      console.log('📊 [Athena Analytics]', eventName, eventParams || {});
+    };
+  </script>
+</head>
+<body class="bg-obsidian text-slate-100 antialiased selection:bg-gold selection:text-obsidian relative min-h-screen bg-luxury-grid">
+
+  <!-- Ambient Background Glow Orbs -->
+  <div class="ambient-orb w-[520px] h-[520px] bg-amber-500/10 top-[-120px] right-[-140px]"></div>
+  <div class="ambient-orb w-[480px] h-[480px] bg-cyan-500/10 top-[320px] left-[-160px]"></div>
+  <div class="ambient-orb w-[600px] h-[600px] bg-amber-500/8 bottom-[15%] right-[10%]"></div>
+
+  <!-- ========================================================================
+       STICKY LUXURY HEADER / NAVBAR (APPLE PRO GLASS STYLE)
+       ======================================================================== -->
+  <header id="mainAppHeader" class="sticky top-0 z-50 border-b border-white/10 bg-[#05070b]/85 backdrop-blur-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-4">
+      
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-3.5 group focus:outline-none">
+        <div class="w-12 h-12 rounded-2xl glass-panel-gold flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform">
+          <div class="absolute inset-0 bg-gradient-to-tr from-amber-500/20 via-transparent to-cyan-400/20"></div>
+          <svg class="w-7 h-7 text-gold" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3L28 9.5V22.5L16 29L4 22.5V9.5L16 3Z" stroke="url(#logoGrad)" stroke-width="2" />
+            <path d="M16 8L23 19.5H9L16 8Z" fill="url(#logoGrad)" fill-opacity="0.25" stroke="#00f0ff" stroke-width="1.6"/>
+            <circle cx="16" cy="15.5" r="2" fill="#f5e6b3"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="4" y1="3" x2="28" y2="29" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f5e6b3"/>
+                <stop offset="0.5" stop-color="#d4af37"/>
+                <stop offset="1" stop-color="#00f0ff"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-en text-xl sm:text-2xl font-bold tracking-wider text-gradient-gold">ATHENA PHONE</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-400/30 font-en">OCA LAB</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">مختبر تجديد زجاج الشاشات الأصلية 100%</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-300">
+        <a href="#hero-slider" class="hover:text-gold transition-colors">المقارنة الحية</a>
+        <a href="#apple-bento" class="hover:text-gold transition-colors">الأجهزة المدعومة</a>
+        <a href="#calculator" class="hover:text-gold transition-colors flex items-center gap-1.5">
+          <span>حاسبة الأسعار (+180 جهاز)</span>
+          <span class="px-1.5 py-0.2 bg-emerald-500/20 text-emerald-300 text-[11px] rounded-md border border-emerald-500/30">د.ج</span>
+        </a>
+        <a href="#oca-process" class="hover:text-gold transition-colors">مختبر OCA</a>
+        <a href="#eligibility" class="hover:text-gold transition-colors">الفحص الذكي</a>
+        <a href="#branches" class="hover:text-gold transition-colors">بيلفور & الكاليتوس</a>
+      </nav>
+
+      <!-- Header Contact & CTA -->
+      <div class="flex items-center gap-2.5">
+        <a href="tel:0540899574" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-en font-bold text-slate-200 transition">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span dir="ltr">0540 89 95 74</span>
+        </a>
+        <a href="#calculator" class="btn-gold px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm inline-flex items-center gap-2">
+          <span>احسب توفيرك الآن</span>
+          <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION WITH INTERACTIVE BEFORE/AFTER SCREEN RESTORATION SLIDER
+       ======================================================================== -->
+  <section id="hero-slider" class="relative pt-8 pb-20 lg:pt-14 lg:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Right Column (RTL): Luxury Value Proposition -->
+        <div class="lg:col-span-7 space-y-7 text-right">
+          
+          <!-- Top Luxury Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel-gold">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 -mr-5"></span>
+            <span class="text-xs sm:text-sm font-bold text-amber-200">تكنولوجيا الغرف المعقمة الدقيقة — iPhone • Samsung • iPad • Watch</span>
+          </div>
+
+          <!-- Main Catchy Headline -->
+          <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-black leading-[1.22] tracking-tight">
+            تغيير الزجاج الخارجي مع الحفاظ على
+            <span class="text-gradient-luxury block mt-2">الشاشة الأصلية 100% بتقنية OCA</span>
+          </h1>
+
+          <!-- Subtitle Explanation -->
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+            انكسر زجاج هاتفك أو ساعتك الذكية أو الآيباد بينما <strong class="text-white font-bold">الصورة سليمة واللمس يستجيب؟</strong> لا تقبل باستبدال شاشتك كاملة بشاشة تجارية مقلدة أو دفع مبالغ طائلة! في مختبر <span class="font-en font-bold text-gold">ATHENA PHONE</span> نفصل الزجاج المكسور بالليزر ونعيد كبس زجاج وكالة أصلي بتقنية <span class="font-en text-cyan-300 font-semibold">Optical Clear Adhesive</span> ليعود جهازك كما خرج من العلبة تماماً.
+          </p>
+
+          <!-- 3 Luxury Metric Cards -->
+          <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-1">
+            <div class="glass-panel rounded-2xl p-3.5 sm:p-4 border-r-2 border-r-gold">
+              <div class="font-en text-2xl sm:text-3xl font-extrabold text-gradient-gold">100%</div>
+              <div class="text-xs sm:text-sm font-bold text-white mt-1">شاشة أصلية</div>
+              <p class="text-[11px] text-slate-400 mt-0.5">نفس الألوان، السطوع، و <span class="font-en">120Hz</span></p>
+            </div>
+            <div class="glass-panel rounded-2xl p-3.5 sm:p-4 border-r-2 border-r-cyan-400">
+              <div class="font-en text-2xl sm:text-3xl font-extrabold text-gradient-cyan">70%</div>
+              <div class="text-xs sm:text-sm font-bold text-white mt-1">توفير في التكلفة</div>
+              <p class="text-[11px] text-slate-400 mt-0.5">أوفر بكثير من تبديل شاشة كاملة</p>
+            </div>
+            <div class="glass-panel rounded-2xl p-3.5 sm:p-4 border-r-2 border-r-emerald-400">
+              <div class="font-en text-2xl sm:text-3xl font-extrabold text-emerald-400">0%</div>
+              <div class="text-xs sm:text-sm font-bold text-white mt-1">فقاعات أو غبار</div>
+              <p class="text-[11px] text-slate-400 mt-0.5">كبس فراغي وأوتوكلاف مخبري</p>
+            </div>
+          </div>
+
+          <!-- Primary & Secondary Hero Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-2">
+            <a href="#calculator" class="btn-gold px-6 py-4 rounded-2xl text-sm sm:text-base inline-flex items-center gap-2.5 shadow-xl">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <span>احسب توفيرك الآن (+180 جهاز)</span>
+            </a>
+            <a href="https://wa.me/213540899574" target="_blank" rel="noopener noreferrer" class="glass-panel px-5 py-4 rounded-2xl text-sm sm:text-base font-bold text-slate-200 hover:text-emerald-400 inline-flex items-center gap-2 border border-emerald-500/30">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>واتساب:</span>
+              <span class="font-en" dir="ltr">0540 89 95 74</span>
+            </a>
+            <a href="https://maps.app.goo.gl/cVj7zFsj9NEeiZpC8" target="_blank" rel="noopener noreferrer" class="glass-panel px-5 py-4 rounded-2xl text-sm sm:text-base font-bold text-slate-200 hover:text-gold inline-flex items-center gap-2 border border-gold/30">
+              <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>موقعنا على Google Maps</span>
+            </a>
+          </div>
+
+          <!-- Trust Footnote -->
+          <div class="flex flex-wrap items-center gap-6 pt-2 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>لا تظهر رسالة "قطعة غير معروفة" في الآيفون</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>بقاء خاصية <span class="font-en text-slate-200">True Tone & Face ID</span> والبصمة تحت الشاشة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left Column (RTL): Interactive Before & After Screen Restoration Slider -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          
+          <!-- Interactive Controls Bar Above Phone -->
+          <div class="w-full max-w-[360px] glass-panel rounded-2xl p-2.5 mb-4 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5">
+              <button type="button" data-slider-preset="15" class="slider-preset-btn px-2.5 py-1.5 rounded-xl text-xs font-bold bg-red-500/15 text-red-300 border border-red-500/30 hover:bg-red-500/25 transition">
+                قبل (مكسور)
+              </button>
+              <button type="button" data-slider-preset="50" class="slider-preset-btn px-2.5 py-1.5 rounded-xl text-xs font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-500/25 transition">
+                مقارنة 50%
+              </button>
+              <button type="button" data-slider-preset="88" class="slider-preset-btn px-2.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/25 transition">
+                بعد OCA
+              </button>
+            </div>
+            <div class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] font-en font-bold text-gold" id="sliderReadoutBadge">
+              OCA: 50%
+            </div>
+          </div>
+
+          <!-- Phone Restoration Stage -->
+          <div class="restoration-stage relative">
+            <div class="absolute -inset-4 bg-gradient-to-b from-cyan-500/20 via-amber-500/15 to-emerald-500/20 rounded-[64px] blur-2xl pointer-events-none"></div>
+
+            <!-- Flagship Titanium Chassis -->
+            <div class="phone-chassis">
+              <div class="phone-btn-right"></div>
+              <div class="phone-btn-left-1"></div>
+              <div class="phone-btn-left-2"></div>
+              <div class="phone-btn-left-3"></div>
+
+              <!-- Interactive Viewport -->
+              <div id="phoneComparisonViewport" class="phone-screen-viewport" role="slider" aria-label="مقارنة الشاشة قبل وبعد تجديد الزجاج بتقنية OCA" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+                
+                <!-- Dynamic Island -->
+                <div class="dynamic-island">
+                  <div class="island-lens"></div>
+                  <div class="text-[9px] font-en text-slate-400 tracking-widest">OCA • 120Hz</div>
+                  <div class="island-sensor"></div>
+                </div>
+
+                <!-- LAYER 1 (BASE): AFTER — FLAWLESS ORIGINAL OLED RESTORED -->
+                <div class="screen-layer-after flex flex-col justify-between p-3.5 pt-11 sm:p-5 sm:pt-14 text-right">
+                  <div class="oleophobic-sheen"></div>
+
+                  <div class="relative z-10 space-y-2 sm:space-y-3">
+                    <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-en text-slate-300 px-1">
+                      <span>09:41</span>
+                      <span class="text-emerald-400 font-bold">5G • 100% OLED</span>
+                    </div>
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[11px] sm:text-xs font-bold shadow-lg">
+                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400"></span>
+                      <span>بعد: زجاج OCA أصلي نقي 100%</span>
+                    </div>
+                  </div>
+
+                  <div class="relative z-10 my-auto py-1 sm:py-2">
+                    <div class="relative w-32 h-32 sm:w-44 sm:h-44 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                      <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-amber-500/40 via-cyan-400/35 to-purple-500/40 blur-xl animate-pulse"></div>
+                      <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full border border-gold/50 bg-[#070b14]/85 backdrop-blur-md flex flex-col items-center justify-center text-center p-2 sm:p-3 shadow-2xl">
+                        <span class="font-en text-[9px] sm:text-[10px] tracking-widest text-cyan-300 uppercase">Original Panel</span>
+                        <span class="font-en text-xl sm:text-2xl font-black text-gradient-gold mt-0.5">100%</span>
+                        <span class="text-[11px] sm:text-xs font-bold text-white leading-tight">شاشة الوكالة الأصلية</span>
+                        <span class="text-[9px] sm:text-[10px] text-emerald-400 mt-0.5 sm:mt-1 font-semibold">True Tone • HDR10+</span>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-1.5 sm:gap-2 text-right">
+                      <div class="rounded-xl bg-white/8 backdrop-blur-md border border-white/10 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-slate-400">استجابة اللمس</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-emerald-300 mt-0.5 font-en">240Hz Touch ✓</div>
+                      </div>
+                      <div class="rounded-xl bg-white/8 backdrop-blur-md border border-white/10 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-slate-400">معدل التحديث</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-cyan-300 mt-0.5 font-en">120Hz ProMotion ✓</div>
+                      </div>
+                      <div class="rounded-xl bg-white/8 backdrop-blur-md border border-white/10 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-slate-400">نقاء الكبس</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-amber-300 mt-0.5">0% فقاعات ✓</div>
+                      </div>
+                      <div class="rounded-xl bg-white/8 backdrop-blur-md border border-white/10 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-slate-400">طلاء الحماية</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-white mt-0.5 font-en">Oleophobic ✓</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="relative z-10 space-y-1.5 sm:space-y-2">
+                    <div class="rounded-2xl bg-emerald-950/60 border border-emerald-400/30 p-2 sm:p-2.5 flex items-center justify-between">
+                      <div class="text-right">
+                        <div class="text-[10px] sm:text-[11px] font-bold text-emerald-300">تم تجديد الزجاج بنجاح</div>
+                        <div class="text-[9px] sm:text-[10px] text-slate-300">باحتفاظ كامل بشاشة المصنع الأصلية</div>
+                      </div>
+                      <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg bg-emerald-500/20 text-emerald-300 font-en text-[10px] sm:text-xs font-bold">OCA PRO</span>
+                    </div>
+                    <div class="w-24 sm:w-28 h-1 bg-white/40 rounded-full mx-auto"></div>
+                  </div>
+                </div>
+
+                <!-- LAYER 2 (CLIPPED OVERLAY): BEFORE — SHATTERED OUTER GLASS -->
+                <div id="screenBeforeLayer" class="screen-layer-before flex flex-col justify-between p-3.5 pt-11 sm:p-5 sm:pt-14 text-right">
+                  <div class="relative z-10 space-y-2 sm:space-y-3">
+                    <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-en text-slate-300 px-1">
+                      <span>09:41</span>
+                      <span class="text-amber-300 font-bold">5G • OLED OK</span>
+                    </div>
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-red-500/25 border border-red-400/50 text-red-200 text-[11px] sm:text-xs font-bold shadow-lg">
+                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400 animate-ping"></span>
+                      <span>قبل: الزجاج الخارجي مكسور فقط</span>
+                    </div>
+                  </div>
+
+                  <div class="relative z-10 my-auto py-1 sm:py-2">
+                    <div class="relative w-32 h-32 sm:w-44 sm:h-44 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                      <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full border border-red-400/40 bg-[#070b14]/85 flex flex-col items-center justify-center text-center p-2 sm:p-3">
+                        <span class="font-en text-[9px] sm:text-[10px] tracking-widest text-red-300 uppercase">Cracked Glass</span>
+                        <span class="font-en text-lg sm:text-xl font-black text-white mt-0.5 leading-tight">الشاشة سليمة!</span>
+                        <span class="text-[10px] sm:text-[11px] font-bold text-amber-300 mt-0.5">الضرر في الزجاج فقط</span>
+                        <span class="text-[9px] sm:text-[10px] text-slate-300 mt-0.5">لا داعي لتبديل شاشة كاملة</span>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-1.5 sm:gap-2 text-right">
+                      <div class="rounded-xl bg-white/8 border border-white/10 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-slate-300">حالة البيكسلات</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-emerald-300 mt-0.5">سليمة 100% ✓</div>
+                      </div>
+                      <div class="rounded-xl bg-white/8 border border-white/10 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-slate-300">حالة اللمس</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-emerald-300 mt-0.5">يعمل بالكامل ✓</div>
+                      </div>
+                      <div class="rounded-xl bg-red-950/50 border border-red-400/40 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-red-200">الطبقة الخارجية</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-red-300 mt-0.5">زجاج متشقق ✗</div>
+                      </div>
+                      <div class="rounded-xl bg-amber-950/50 border border-amber-400/40 p-1.5 sm:p-2.5">
+                        <div class="text-[9px] sm:text-[10px] text-amber-200">الحل المثالي</div>
+                        <div class="text-[11px] sm:text-xs font-bold text-gold mt-0.5">تجديد زجاج OCA</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="relative z-10 space-y-1.5 sm:space-y-2">
+                    <div class="rounded-2xl bg-red-950/75 border border-red-400/40 p-2 sm:p-2.5 flex items-center justify-between">
+                      <div class="text-right">
+                        <div class="text-[10px] sm:text-[11px] font-bold text-red-200">زجاج مكسور يهدد الشاشة</div>
+                        <div class="text-[9px] sm:text-[10px] text-slate-300">استبدله الآن قبل تضرر OLED</div>
+                      </div>
+                      <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg bg-red-500/30 text-red-200 font-en text-[10px] sm:text-xs font-bold">BEFORE</span>
+                    </div>
+                    <div class="w-24 sm:w-28 h-1 bg-white/40 rounded-full mx-auto"></div>
+                  </div>
+
+                  <div class="cracked-glass-tint"></div>
+
+                  <svg class="crack-svg-overlay" viewBox="0 0 310 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <circle cx="225" cy="195" r="5" fill="rgba(255,255,255,0.65)" />
+                    <circle cx="225" cy="195" r="14" stroke="rgba(255,255,255,0.75)" stroke-width="1.2" stroke-dasharray="4 2" />
+                    <circle cx="225" cy="195" r="28" stroke="rgba(255,255,255,0.55)" stroke-width="1" />
+                    <circle cx="225" cy="195" r="48" stroke="rgba(255,255,255,0.4)" stroke-width="0.9" />
+                    <path d="M225 195 L310 45 M225 195 L295 135 L310 128 M225 195 L310 215 M225 195 L285 310 L310 355 M225 195 L210 380 L245 520 L310 630 M225 195 L145 290 L75 430 L0 535 M225 195 L110 215 L25 245 L0 260 M225 195 L130 130 L40 65 L0 20 M225 195 L195 75 L175 0" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M226 196 L310 46 M226 196 L286 311 L310 356 M226 196 L211 381 L246 521 M226 196 L146 291 L76 431 M226 196 L111 216 L26 246 M226 196 L131 131 L41 66" stroke="rgba(186,230,253,0.45)" stroke-width="0.8" />
+                    <path d="M195 75 L265 95 L295 135 L290 210 L260 270 L215 295 L145 290 L110 215 L130 130 Z" stroke="rgba(255,255,255,0.55)" stroke-width="1" />
+                    <path d="M178 30 L285 65 L305 165 L275 300 L210 365 L105 355 L65 230 L85 95 Z" stroke="rgba(255,255,255,0.42)" stroke-width="0.9" />
+                    <circle cx="88" cy="465" r="4" fill="rgba(255,255,255,0.6)" />
+                    <circle cx="88" cy="465" r="18" stroke="rgba(255,255,255,0.65)" stroke-width="1.1" />
+                    <circle cx="88" cy="465" r="38" stroke="rgba(255,255,255,0.45)" stroke-width="0.8" />
+                    <path d="M88 465 L0 390 M88 465 L0 480 M88 465 L15 610 L0 645 M88 465 L95 650 M88 465 L185 620 L215 650 M88 465 L245 520 M88 465 L210 380 M88 465 L75 310 L0 190" stroke="rgba(255,255,255,0.78)" stroke-width="1.35" />
+                    <path d="M145 290 L180 335 L210 380 M110 215 L75 310 L145 290 M245 520 L165 555 L92 575 L15 610 M40 65 L85 155 L25 245 M285 310 L240 425 L310 470" stroke="rgba(255,255,255,0.48)" stroke-width="0.85" stroke-dasharray="18 3 8 2" />
+                    <polygon points="220,192 232,188 229,203" fill="rgba(255,255,255,0.35)" />
+                    <polygon points="84,462 94,459 91,472" fill="rgba(255,255,255,0.35)" />
+                  </svg>
+                </div>
+
+                <!-- LASER SCANNER BEAM & DRAGGABLE HANDLE -->
+                <div id="sliderLaserFlare" class="slider-laser-flare"></div>
+                <div id="sliderLaserLine" class="slider-laser-line"></div>
+                <div id="sliderHandleBtn" class="slider-handle-btn" title="اسحب للمقارنة بين قبل وبعد">
+                  <svg class="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3" />
+                  </svg>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 flex items-center gap-2 text-xs text-slate-400 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>حرك شعاع الليزر يميناً ويساراً لمشاهدة استعادة الشاشة الأصلية بتقنية OCA</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       APPLE.COM STYLE BENTO GRID SHOWCASE (الأجهزة والتقنيات المدعومة)
+       ======================================================================== -->
+  <section id="apple-bento" class="py-16 relative border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="font-en text-xs font-bold tracking-widest uppercase text-gold">APPLE PRO GRADE • PRECISION OCA LAB</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-gradient-apple leading-tight">
+          كل أجهزتك المفضلة. <span class="text-gradient-gold">تعود كأنها خرجت من العلبة.</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          تجهيزات مخبرية مخصصة لكل فئة: من آيفون 7 حتى 18 برو ماكس، ساعات Apple Watch، أجهزة iPad، وشاشات سامسونج المنحنية وجميع الفئات.
+        </p>
+      </div>
+
+      <!-- Apple Flagship Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+        
+        <!-- Bento Card 1: iPhone 7 to 18 Pro Max (7 Cols) -->
+        <div class="md:col-span-7 apple-bento-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -left-12 -bottom-12 w-64 h-64 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="space-y-3 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-gold/30 text-gold text-xs font-en font-bold">
+              iPhone 7 → iPhone 18 Pro Max
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black text-white">
+              سلسلة <span class="font-en text-gradient-gold">iPhone</span> الكاملة بدون رسالة خطأ
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
+              نحافظ على شاشة أبل الأصلية <span class="font-en text-white">Super Retina XDR</span> مع بقاء خاصية <span class="font-en text-cyan-300">True Tone & Face ID</span> ومعدل تحديث <span class="font-en text-amber-200">120Hz ProMotion</span> دون الحاجة لنقل أيسي الشاشة أو ظهور تنبيه قطعة غير أصلية.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 relative z-10">
+            <div class="flex flex-wrap gap-1.5 font-en text-[11px] text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">18 Pro Max</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">17 Pro Max</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">16 Pro Max</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">15 / 14 / 13 / 12 / 11</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">X / XS / 8 / 7</span>
+            </div>
+            <a href="#calculator" data-jump-brand="apple" data-jump-sub="iphone" class="jump-calc-btn text-xs font-bold text-gold hover:underline">عرض أسعار الآيفون ←</a>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: iPad & Apple Watch (5 Cols) -->
+        <div class="md:col-span-5 apple-bento-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute -right-10 -top-10 w-52 h-52 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="space-y-3 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 text-xs font-en font-bold">
+              iPad Pro / Air & Apple Watch Ultra
+            </div>
+            <h3 class="text-2xl font-black text-white">
+              خبراء <span class="font-en text-gradient-cyan">iPad & Apple Watch</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              قوالب كبس فراغي خاصة بالشاشات العملاقة للآيباد (مع دعم <span class="font-en text-white">Apple Pencil 120Hz</span>) وزجاج الياقوت المنحني لساعات <span class="font-en text-white">Apple Watch Series & Ultra</span> مع عزل مائي محكم.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between gap-2 relative z-10">
+            <a href="#calculator" data-jump-brand="apple" data-jump-sub="ipad" class="jump-calc-btn px-3 py-1.5 rounded-xl bg-white/5 hover:bg-gold hover:text-obsidian border border-white/10 text-xs font-bold transition">أسعار iPad</a>
+            <a href="#calculator" data-jump-brand="apple" data-jump-sub="watch" class="jump-calc-btn px-3 py-1.5 rounded-xl bg-white/5 hover:bg-cyan-400 hover:text-obsidian border border-white/10 text-xs font-bold transition">أسعار Apple Watch</a>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Samsung S / A / F / M / J Series (6 Cols) -->
+        <div class="md:col-span-6 apple-bento-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-3 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-400/30 text-purple-300 text-xs font-en font-bold">
+              Samsung Galaxy S • Note • A • F • M • J
+            </div>
+            <h3 class="text-2xl font-black text-white">
+              إتقان الشاشات المنحنية <span class="font-en text-gradient-gold">Curved Edge</span> وكل فئات سامسونج
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              تجميد بالنيتروجين السائل (-150°C) لفصل زجاج شاشات <span class="font-en text-white">S24 Ultra / S23 Ultra / Note</span> المنحنية بأمان تام، بالإضافة إلى تجديد اقتصادي سريع لكامل عائلات <span class="font-en text-cyan-300">Serie A, Serie M, Serie F, Serie J</span> مع الحفاظ على البصمة الضوئية والألتراسونيك.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between relative z-10">
+            <span class="text-xs text-emerald-400 font-bold">✓ الحفاظ على بصمة الشاشة وقلم S-Pen</span>
+            <a href="#calculator" data-jump-brand="samsung" class="jump-calc-btn text-xs font-bold text-gold hover:underline">تصفح كل موديلات سامسونج ←</a>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: Redmi, POCO, Infinix, Realme (6 Cols) -->
+        <div class="md:col-span-6 apple-bento-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-3 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-en font-bold">
+              Redmi • POCO • Infinix • Realme
+            </div>
+            <h3 class="text-2xl font-black text-white">
+              دعم شامل لهواتف <span class="font-en text-gradient-cyan">Redmi & POCO & Infinix & Realme</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              سواء كانت شاشة هاتفك مسطحة أو منحنية <span class="font-en text-white">3D Curved AMOLED</span> (مثل Redmi Note 13 Pro+ أو Infinix Zero/Note VIP أو Realme Pro+)، نعيد لها زجاج المصنع الأصلي بسعر جد تنافسي.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center gap-2 relative z-10">
+            <a href="#calculator" data-jump-brand="xiaomi_poco" data-jump-sub="redmi_note" class="jump-calc-btn px-3 py-1.5 rounded-xl bg-white/5 hover:bg-gold hover:text-obsidian border border-white/10 text-xs font-en font-bold transition">Redmi</a>
+            <a href="#calculator" data-jump-brand="xiaomi_poco" data-jump-sub="poco" class="jump-calc-btn px-3 py-1.5 rounded-xl bg-white/5 hover:bg-gold hover:text-obsidian border border-white/10 text-xs font-en font-bold transition">POCO</a>
+            <a href="#calculator" data-jump-brand="other" data-jump-sub="infinix" class="jump-calc-btn px-3 py-1.5 rounded-xl bg-white/5 hover:bg-gold hover:text-obsidian border border-white/10 text-xs font-en font-bold transition">Infinix</a>
+            <a href="#calculator" data-jump-brand="other" data-jump-sub="realme" class="jump-calc-btn px-3 py-1.5 rounded-xl bg-white/5 hover:bg-gold hover:text-obsidian border border-white/10 text-xs font-en font-bold transition">Realme</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERACTIVE DZD SAVINGS CALCULATOR SECTION (+180 MODELS + LIVE SEARCH)
+       ======================================================================== -->
+  <section id="calculator" class="py-20 relative border-t border-white/10 bg-[#070a12]/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-gold text-xs font-bold">
+          <span>حاسبة التوفير الشاملة بالدينار الجزائري (+180 جهاز مدعوم)</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white">
+          اختر جهازك واحسب توفيرك مع <span class="font-en text-gradient-gold">ATHENA PHONE</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          ابحث عن هاتفك أو اختر الفئة والموديل لمعرفة سعر تجديد الزجاج بتقنية <span class="font-en text-cyan-300">OCA</span> ومقدار توفيرك الفوري مقارنة بتبديل شاشة كاملة.
+        </p>
+      </div>
+
+      <!-- Calculator Main Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Right Panel (RTL): Selection Controls (7 Cols) -->
+        <div class="lg:col-span-7 glass-panel rounded-3xl p-5 sm:p-8 space-y-6">
+          
+          <!-- Instant Global Model Search Bar -->
+          <div class="relative">
+            <input
+              type="text"
+              id="globalModelSearchInput"
+              placeholder="🔍 ابحث بسرعة عن أي جهاز... (مثال: 15 Pro أو A54 أو Note 13 أو J7 أو Watch)"
+              class="w-full rounded-2xl bg-[#0b101b] border border-white/15 focus:border-cyan-400 text-white px-4 py-3.5 pr-11 text-sm sm:text-base placeholder-slate-400 focus:outline-none transition shadow-inner"
+            />
+            <svg class="w-5 h-5 text-cyan-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
+            </svg>
+            <button type="button" id="clearSearchBtn" class="hidden absolute left-3.5 top-1/2 -translate-y-1/2 text-xs px-2.5 py-1 rounded-lg bg-white/10 text-slate-300 hover:text-white">مسح ✕</button>
+          </div>
+
+          <!-- Step 1: Level 1 - Master Brand Tabs (Clean 2-Tier Hierarchy) -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-gold text-obsidian font-en text-xs font-black flex items-center justify-center">1</span>
+                <span>العلامة الرئيسية:</span>
+              </label>
+              <span id="sheetSyncStatusBadge" class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>قاعدة الأسعار محدثة</span>
+              </span>
+            </div>
+
+            <!-- Master Brand Tabs (Level 1) -->
+            <div id="brandTabsContainer" class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-2 -mx-1 px-1">
+              <button type="button" data-brand="apple" class="brand-tab active rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
+                <span class="text-base">🍏</span>
+                <span>Apple</span>
+              </button>
+              <button type="button" data-brand="samsung" class="brand-tab rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
+                <span class="text-base">🪐</span>
+                <span>Samsung</span>
+              </button>
+              <button type="button" data-brand="xiaomi_poco" class="brand-tab rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
+                <span class="text-base">⚡</span>
+                <span>Xiaomi & POCO</span>
+              </button>
+              <button type="button" data-brand="other" class="brand-tab rounded-2xl py-3 px-4 sm:px-5 border border-white/10 bg-white/5 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shrink-0 whitespace-nowrap cursor-pointer transition">
+                <span class="text-base">📱</span>
+                <span>أجهزة أخرى (Infinix, Realme)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 1.5: Level 2 - Contextual Dynamic Sub-Filters -->
+          <div id="subSeriesFilterWrapper" class="space-y-3 pt-1">
+            <div class="flex items-center justify-between">
+              <div class="text-xs text-slate-300 font-bold flex items-center gap-1.5" id="subFilterLabel">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span>الفئة الفرعية:</span>
+              </div>
+              <span id="subCategoryCountBadge" class="text-[11px] font-en text-cyan-300 font-semibold"></span>
+            </div>
+
+            <!-- Level 2 Sub-Filter Chips -->
+            <div id="subSeriesPillsContainer" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 -mx-1 px-1">
+              <!-- Populated dynamically by script.js -->
+            </div>
+
+            <!-- Level 2.5: iPhone Generation Pills (Appears when Apple -> هواتف iPhone is active) -->
+            <div id="iphoneGenFilterWrapper" class="hidden pt-1 space-y-1.5 border-t border-white/5">
+              <div class="text-[11px] text-slate-400 font-semibold flex items-center gap-1">
+                <span>تصفية جيل الآيفون:</span>
+              </div>
+              <div id="iphoneGenPillsContainer" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 -mx-1 px-1">
+                <!-- Populated dynamically by script.js: [الكل], [17 & 18], [15 & 16], [13 & 14], [11 & 12], [X & أقدم] -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Select Phone Model (Dropdown + Quick Cards) -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label for="modelSelectDropdown" class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-gold text-obsidian font-en text-xs font-black flex items-center justify-center">2</span>
+                <span>اختر الموديل بالتحديد:</span>
+              </label>
+              <span id="modelCountBadge" class="text-xs font-en text-cyan-300 font-bold">37 موديل متوفر</span>
+            </div>
+
+            <!-- Dropdown Select for Direct Access -->
+            <div class="relative">
+              <select id="modelSelectDropdown" class="w-full rounded-2xl bg-[#0b101b] border border-white/15 focus:border-gold text-white px-4 py-3.5 text-sm sm:text-base font-bold focus:outline-none transition appearance-none cursor-pointer">
+                <!-- Populated by script.js -->
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-gold">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Interactive Quick Model Pills Grid -->
+            <div id="modelQuickGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 max-h-64 overflow-y-auto pr-1">
+              <!-- Populated dynamically by script.js -->
+            </div>
+          </div>
+
+          <!-- Step 3: Select Preferred Branch -->
+          <div class="space-y-3 pt-1">
+            <label class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-gold text-obsidian font-en text-xs font-black flex items-center justify-center">3</span>
+              <span>اختر الفرع المفضل للحجز والاستلام:</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="branchSelectorGroup">
+              <button type="button" data-branch="سوق بيلفور (الحراش)" class="branch-select-btn active rounded-2xl p-3.5 border border-gold bg-amber-500/10 text-right transition flex items-center justify-between">
+                <div>
+                  <div class="text-sm font-bold text-white">فرع سوق بيلفور — الحراش</div>
+                  <div class="text-xs text-slate-400 mt-0.5">تشخيص فوري وتجديد في نفس اليوم</div>
+                </div>
+                <span class="w-4 h-4 rounded-full border-2 border-gold bg-gold"></span>
+              </button>
+              <button type="button" data-branch="الكاليتوس (الجزائر)" class="branch-select-btn rounded-2xl p-3.5 border border-white/10 bg-white/5 text-right transition flex items-center justify-between">
+                <div>
+                  <div class="text-sm font-bold text-white">فرع الكاليتوس — الجزائر</div>
+                  <div class="text-xs text-slate-400 mt-0.5">مختبر OCA المتكامل وخدمة سريعة</div>
+                </div>
+                <span class="w-4 h-4 rounded-full border-2 border-slate-500"></span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Left Panel (RTL): Live Price Comparison & WhatsApp Booking (5 Cols) -->
+        <div class="lg:col-span-5 glass-panel-gold rounded-3xl p-6 sm:p-8 space-y-6 relative overflow-hidden lg:sticky lg:top-24">
+          
+          <!-- Selected Device Header -->
+          <div class="flex items-center justify-between border-b border-white/10 pb-4">
+            <div>
+              <span class="text-xs text-amber-300 font-bold block">الجهاز المختار حالياً:</span>
+              <h3 id="calcSelectedModelName" class="font-en text-2xl font-black text-white mt-0.5">iPhone 15 Pro Max</h3>
+              <span id="calcSelectedPanelType" class="text-xs font-en text-cyan-300">LTPO Super Retina XDR OLED • 120Hz</span>
+            </div>
+            <div class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-center">
+              <span class="text-[10px] text-slate-400 block">مدة الإنجاز</span>
+              <span id="calcRepairTime" class="text-xs font-bold text-emerald-400">60 - 90 دقيقة</span>
+            </div>
+          </div>
+
+          <!-- Market Full Screen vs Athena OCA Price Cards -->
+          <div class="space-y-3.5">
+            
+            <!-- Market Full Screen Replacement -->
+            <div class="rounded-2xl bg-red-950/30 border border-red-500/25 p-4 flex items-center justify-between">
+              <div>
+                <div class="text-xs text-red-300 font-semibold">سعر تبديل الشاشة كاملة في السوق</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">تخسر شاشة المصنع أو تدفع تكلفة باهظة</div>
+              </div>
+              <div class="text-left">
+                <span id="calcMarketPrice" class="font-en text-lg sm:text-xl font-bold text-red-400 line-through">68,000</span>
+                <span class="text-xs text-red-300 font-bold mr-1">د.ج</span>
+              </div>
+            </div>
+
+            <!-- Athena Phone OCA Glass Renewal -->
+            <div class="rounded-2xl bg-emerald-950/35 border-2 border-gold/60 p-4 flex items-center justify-between shadow-lg">
+              <div>
+                <div class="inline-flex items-center gap-1.5 text-xs text-amber-300 font-bold">
+                  <span>سعر تجديد الزجاج بتقنية OCA</span>
+                  <span class="px-1.5 py-0.5 rounded bg-gold text-obsidian font-en text-[10px] font-black">ATHENA</span>
+                </div>
+                <div class="text-[11px] text-slate-300 mt-0.5">مع الحفاظ على شاشتك الأصلية 100%</div>
+              </div>
+              <div class="text-left">
+                <span id="calcAthenaPrice" class="font-en text-2xl sm:text-3xl font-black text-gradient-gold">18,500</span>
+                <span class="text-xs text-amber-200 font-bold mr-1">د.ج</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Comparison Progress Bar -->
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">نسبة التوفير مقارنة بشاشة كاملة:</span>
+              <span id="calcSavingPercentBadge" class="font-en font-bold text-emerald-400">وفّرت 73% من التكلفة</span>
+            </div>
+            <div class="w-full h-3 rounded-full bg-white/10 overflow-hidden p-0.5">
+              <div id="calcProgressBar" class="h-full rounded-full bg-gradient-to-l from-emerald-400 via-cyan-400 to-gold transition-all duration-500" style="width: 73%"></div>
+            </div>
+          </div>
+
+          <!-- Giant Live DZD Saved Counter -->
+          <div class="rounded-2xl bg-gradient-to-br from-emerald-500/20 via-emerald-900/25 to-cyan-900/20 border border-emerald-400/40 p-5 text-center relative overflow-hidden">
+            <div class="text-xs sm:text-sm font-bold text-emerald-200">المبلغ الصافي الذي ستوفره في جيبك:</div>
+            <div class="my-1.5 flex items-baseline justify-center gap-2">
+              <span id="calcSavedAmount" class="font-en text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight drop-shadow">49,500</span>
+              <span class="text-lg sm:text-xl font-black text-white">د.ج</span>
+            </div>
+            <div class="text-xs text-slate-300">بالإضافة إلى بقاء شاشة جهازك الأصلية 100% بضمان المختبر!</div>
+          </div>
+
+          <!-- Auto-Generated WhatsApp Message Preview -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>رسالة الحجز التلقائية (واتساب <span class="font-en text-emerald-400" dir="ltr">0540 89 95 74</span>):</span>
+              <button type="button" id="copyBookingTextBtn" class="text-cyan-400 hover:text-cyan-300 font-bold underline">نسخ النص</button>
+            </div>
+            <div id="whatsappPreviewBox" class="rounded-xl bg-black/45 border border-white/10 p-3 text-xs text-slate-300 leading-relaxed font-normal select-all whitespace-pre-line">
+              <!-- Populated by script.js -->
+            </div>
+          </div>
+
+          <!-- WhatsApp Direct Booking Button -->
+          <a id="whatsappBookingBtn" href="https://wa.me/213540899574" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full py-4 px-6 rounded-2xl text-base sm:text-lg flex items-center justify-center gap-3 shadow-2xl">
+            <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.554 4.119 1.525 5.852l-1.525 5.568 5.714-1.499c1.693.922 3.633 1.447 5.696 1.447 6.627 0 12-5.373 12-12 0-6.627-5.373-12-11.41-11.368z"/>
+            </svg>
+            <span>احجز موعدك الآن عبر واتساب</span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROCESS SHOWCASE: DYNAMIC 4-STEP OCA RESTORATION WORKBENCH
+       ======================================================================== -->
+  <section id="oca-process" class="py-16 sm:py-24 relative border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header with Title & Auto-Play / Navigation Controls -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-6">
+        <div class="space-y-3 max-w-2xl text-right">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-bold">
+            <span class="font-en">OCA CLEANROOM TECHNOLOGY</span>
+            <span>•</span>
+            <span>ورشة العمل التفاعلية</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-black text-white">
+            كيف نجدد زجاج شاشتك؟ <span class="text-gradient-cyan">ورشة العمل التفاعلية (4 مراحل)</span>
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-base leading-relaxed">
+            تنقل بين المراحل التفاعلية أو شغّل المحاكي المباشر لمعاينة خطوات تجديد زجاج شاشتك داخل ورشة <span class="font-en text-gold font-bold">ATHENA PHONE</span> بدقة ميكرونية فائقة.
+          </p>
+        </div>
+
+        <!-- Controls: Prev / Next / Auto-Play Toggle -->
+        <div class="flex items-center gap-2.5 self-start md:self-auto">
+          <button type="button" id="workbenchPrevBtn" class="glass-panel p-2.5 sm:p-3 rounded-2xl text-slate-300 hover:text-white hover:border-cyan-400 transition" title="المرحلة السابقة" aria-label="المرحلة السابقة">
+            <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button type="button" id="workbenchNextBtn" class="glass-panel p-2.5 sm:p-3 rounded-2xl text-slate-300 hover:text-white hover:border-cyan-400 transition" title="المرحلة التالية" aria-label="المرحلة التالية">
+            <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          <button type="button" id="toggleAutoLabBtn" class="glass-panel px-4 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold text-cyan-300 border border-cyan-500/30 hover:border-gold flex items-center gap-2 transition">
+            <span id="autoLabStatusDot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span id="autoLabBtnText">المحاكي: يعمل تلقائياً</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Interactive Step Selector Tabs (Touch-scrollable on mobile) -->
+      <div class="flex items-center gap-3 overflow-x-auto no-scrollbar pb-3 mb-8 -mx-1 px-1" id="ocaStepsGrid">
+        <button type="button" data-step="1" class="workbench-step-tab active shrink-0 glass-panel rounded-2xl p-3.5 sm:p-4 text-right flex items-center gap-3 min-w-[220px] sm:flex-1 cursor-pointer">
+          <span class="step-num-pill w-8 h-8 rounded-xl bg-white/10 font-en font-black text-xs sm:text-sm flex items-center justify-center transition shrink-0">01</span>
+          <div>
+            <div class="text-xs sm:text-sm font-extrabold text-white">سلك الألماس (0.03mm)</div>
+            <div class="text-[10px] text-cyan-300">الفصل الحراري الدقيق</div>
+          </div>
+        </button>
+
+        <button type="button" data-step="2" class="workbench-step-tab shrink-0 glass-panel rounded-2xl p-3.5 sm:p-4 text-right flex items-center gap-3 min-w-[220px] sm:flex-1 cursor-pointer">
+          <span class="step-num-pill w-8 h-8 rounded-xl bg-white/10 font-en font-black text-xs sm:text-sm flex items-center justify-center transition shrink-0">02</span>
+          <div>
+            <div class="text-xs sm:text-sm font-extrabold text-white">تنظيف الغراء & ميكروفايبر</div>
+            <div class="text-[10px] text-slate-400">إزالة بقايا اللاصق القديم</div>
+          </div>
+        </button>
+
+        <button type="button" data-step="3" class="workbench-step-tab shrink-0 glass-panel rounded-2xl p-3.5 sm:p-4 text-right flex items-center gap-3 min-w-[220px] sm:flex-1 cursor-pointer">
+          <span class="step-num-pill w-8 h-8 rounded-xl bg-white/10 font-en font-black text-xs sm:text-sm flex items-center justify-center transition shrink-0">03</span>
+          <div>
+            <div class="text-xs sm:text-sm font-extrabold text-white">الغرفة المعقمة & الكبس الفراغي</div>
+            <div class="text-[10px] text-slate-400">Mitsubishi OCA Lamination</div>
+          </div>
+        </button>
+
+        <button type="button" data-step="4" class="workbench-step-tab shrink-0 glass-panel rounded-2xl p-3.5 sm:p-4 text-right flex items-center gap-3 min-w-[220px] sm:flex-1 cursor-pointer">
+          <span class="step-num-pill w-8 h-8 rounded-xl bg-white/10 font-en font-black text-xs sm:text-sm flex items-center justify-center transition shrink-0">04</span>
+          <div>
+            <div class="text-xs sm:text-sm font-extrabold text-white">الأوتوكلاف والضغط العالي</div>
+            <div class="text-[10px] text-slate-400">إزالة الفقاعات 100% (6.5 Bar)</div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Main Interactive Workbench Canvas -->
+      <div class="glass-panel-cyan rounded-3xl p-5 sm:p-8 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Stage Telemetry & Description (6 cols) -->
+          <div class="lg:col-span-6 space-y-5 text-right">
+            <div class="flex items-center justify-between">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 text-xs font-en font-bold" id="labVisualizerTag">
+                STAGE 01 / 04 • DIAMOND WIRE 0.03mm SEPARATION
+              </div>
+              <span id="labChamberTimer" class="font-en text-xs text-gold font-bold bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">STEP 1 OF 4</span>
+            </div>
+
+            <h3 id="labVisualizerTitle" class="text-xl sm:text-3xl font-black text-white leading-snug">
+              الفصل الميكروني للزجاج المكسور دون المساس بطبقة OLED
+            </h3>
+
+            <p id="labVisualizerDesc" class="text-xs sm:text-base text-slate-300 leading-relaxed min-h-[70px]">
+              يتم تثبيت الشاشة على منصة تفريغ حرارية دقيقة (80°C) لتليين المادة اللاصقة، ثم يمر سلك الموليبدينوم والألماس بسماكة 0.03 ملم بسلاسة بين الزجاج المتشقق وشاشة الوكالة الأصلية لفصل الزجاج المتضرر مع الحفاظ على كل بيكسل سليم.
+            </p>
+
+            <!-- 3 Dynamic Metric Cards -->
+            <div class="grid grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+              <div class="rounded-2xl bg-black/45 border border-white/10 p-3 sm:p-3.5">
+                <div class="text-[10px] sm:text-[11px] text-slate-400">الحرارة المخبرية</div>
+                <div id="labMetricTemp" class="font-en text-base sm:text-xl font-black text-amber-300 mt-1">80.0 °C</div>
+              </div>
+              <div class="rounded-2xl bg-black/45 border border-white/10 p-3 sm:p-3.5">
+                <div class="text-[10px] sm:text-[11px] text-slate-400">الضغط / التفريغ</div>
+                <div id="labMetricPressure" class="font-en text-base sm:text-xl font-black text-cyan-300 mt-1">-65 kPa</div>
+              </div>
+              <div class="rounded-2xl bg-black/45 border border-white/10 p-3 sm:p-3.5">
+                <div class="text-[10px] sm:text-[11px] text-slate-400">سلامة شاشة OLED</div>
+                <div id="labMetricSafety" class="font-en text-base sm:text-xl font-black text-emerald-400 mt-1">100% SAFE</div>
+              </div>
+            </div>
+
+            <!-- Stage Progress Indicator Bar -->
+            <div class="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
+              <div id="labProgressBar" class="h-full bg-gradient-to-r from-cyan-400 via-amber-400 to-emerald-400 transition-all duration-500" style="width: 25%"></div>
+            </div>
+          </div>
+
+          <!-- Live Interactive Visual Schematic (6 cols) -->
+          <div class="lg:col-span-6">
+            <div class="rounded-3xl bg-[#040811] border border-cyan-500/30 p-5 sm:p-6 relative min-h-[320px] sm:h-[340px] flex flex-col items-center justify-center overflow-hidden shadow-2xl">
+              <div class="absolute inset-0 bg-luxury-grid opacity-60 pointer-events-none"></div>
+
+              <div class="absolute top-4 right-4 left-4 flex items-center justify-between text-[11px] font-en text-slate-400 z-20">
+                <span id="labChamberModeText" class="text-cyan-300 font-bold flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                  <span>● ACTIVE: 0.03mm DIAMOND WIRE SEPARATOR</span>
+                </span>
+                <span class="text-slate-400 font-mono text-[10px]">ATHENA-LAB-v2</span>
+              </div>
+
+              <!-- DYNAMIC VISUAL STAGES CONTAINER -->
+              <div id="workbenchVisualContainer" class="relative w-full max-w-md z-10 px-2 sm:px-4 py-8">
+                <!-- Dynamically rendered visual schematics: Step 1, 2, 3, or 4 -->
+              </div>
+
+              <!-- Direct Step Navigation Dots -->
+              <div class="absolute bottom-3 flex items-center gap-2 z-20">
+                <button type="button" data-step="1" class="lab-dot w-8 h-2 rounded-full bg-cyan-400 transition-all" aria-label="المرحلة 1"></button>
+                <button type="button" data-step="2" class="lab-dot w-2.5 h-2 rounded-full bg-white/20 transition-all" aria-label="المرحلة 2"></button>
+                <button type="button" data-step="3" class="lab-dot w-2.5 h-2 rounded-full bg-white/20 transition-all" aria-label="المرحلة 3"></button>
+                <button type="button" data-step="4" class="lab-dot w-2.5 h-2 rounded-full bg-white/20 transition-all" aria-label="المرحلة 4"></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       APPLE TRADE-IN STYLE INTERACTIVE SCREEN SELF-DIAGNOSTIC QUIZ (#eligibility)
+       ======================================================================== -->
+  <section id="eligibility" class="py-20 relative border-t border-white/10 bg-[#070a12]/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="font-en text-xs font-bold text-cyan-300 tracking-widest uppercase">APPLE-STYLE SMART DIAGNOSTIC</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">الفحص الذكي التفاعلي: هل شاشتك مؤهلة لتقنية <span class="font-en text-gold">OCA</span>؟</h2>
+        <p class="text-sm text-slate-400">أجب بنعم أو لا على الأسئلة الثلاثة التالية لمعرفة النتيجة فوراً</p>
+      </div>
+
+      <div class="apple-bento-card rounded-3xl p-6 sm:p-10 space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          <!-- Question 1 -->
+          <div class="rounded-2xl bg-black/40 border border-white/10 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-xs font-en text-gold font-bold">QUESTION 01</span>
+              <h3 class="text-base font-extrabold text-white mt-1">هل الصورة والألوان تظهر كاملة في الشاشة؟</h3>
+              <p class="text-xs text-slate-400 mt-1">تشتغل الشاشة وتعرض القوائم والصور رغم تشقق الزجاج.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-2" data-diag-q="q1">
+              <button type="button" data-val="yes" class="diag-choice-btn selected-yes py-2.5 rounded-xl border border-white/15 text-xs font-bold transition">نعم، واضحة ✓</button>
+              <button type="button" data-val="no" class="diag-choice-btn py-2.5 rounded-xl border border-white/15 bg-white/5 text-xs font-bold text-slate-300 transition">لا، سوداء ✗</button>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="rounded-2xl bg-black/40 border border-white/10 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-xs font-en text-gold font-bold">QUESTION 02</span>
+              <h3 class="text-base font-extrabold text-white mt-1">هل اللمس (Tactile) يستجيب في كامل الشاشة؟</h3>
+              <p class="text-xs text-slate-400 mt-1">يمكنك تمرير الأصابع والكتابة بدون مناطق متوقفة.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-2" data-diag-q="q2">
+              <button type="button" data-val="yes" class="diag-choice-btn selected-yes py-2.5 rounded-xl border border-white/15 text-xs font-bold transition">نعم، يعمل ✓</button>
+              <button type="button" data-val="no" class="diag-choice-btn py-2.5 rounded-xl border border-white/15 bg-white/5 text-xs font-bold text-slate-300 transition">لا يعمل ✗</button>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="rounded-2xl bg-black/40 border border-white/10 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-xs font-en text-gold font-bold">QUESTION 03</span>
+              <h3 class="text-base font-extrabold text-white mt-1">هل الشاشة خالية من بقع الحبر الأسود والخطوط؟</h3>
+              <p class="text-xs text-slate-400 mt-1">لا توجد خطوط خضراء/وردية عمودية أو بقع حبر داخلي.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-2" data-diag-q="q3">
+              <button type="button" data-val="yes" class="diag-choice-btn selected-yes py-2.5 rounded-xl border border-white/15 text-xs font-bold transition">نعم، خالية ✓</button>
+              <button type="button" data-val="no" class="diag-choice-btn py-2.5 rounded-xl border border-white/15 bg-white/5 text-xs font-bold text-slate-300 transition">فيها بقع/خطوط ✗</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Live Diagnostic Verdict Box -->
+        <div id="diagResultBanner" class="rounded-2xl bg-emerald-950/50 border border-emerald-400/50 p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-4 text-right">
+            <div id="diagResultIcon" class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl font-black shrink-0">✓</div>
+            <div>
+              <h4 id="diagResultTitle" class="text-base sm:text-lg font-black text-emerald-300">ممتاز! شاشتك مؤهلة 100% لتجديد الزجاج الخارجي بتقنية OCA</h4>
+              <p id="diagResultSub" class="text-xs sm:text-sm text-slate-300 mt-0.5">يمكنك توفير حتى 70% من سعر الشاشة الكاملة مع الحفاظ على شاشتك الأصلية 100% في أقل من 90 دقيقة.</p>
+            </div>
+          </div>
+          <a href="#calculator" class="btn-gold px-5 py-3 rounded-xl text-xs sm:text-sm shrink-0">احسب السعر واحجز الآن</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BRANCH INFORMATION & DIRECT GOOGLE MAPS (سوق بيلفور & الكاليتوس)
+       ======================================================================== -->
+  <section id="branches" class="py-20 relative border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-gold text-xs font-bold">
+          <span>تفضل بزيارة مختبراتنا في الجزائر العاصمة</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white">
+          فروع <span class="font-en text-gradient-gold">ATHENA PHONE</span> المعتمدة
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          مجهزون بأحدث غرف الكبس الفراغي والأوتوكلاف في فرعي <strong class="text-white">سوق بيلفور (الحراش)</strong> و <strong class="text-white">الكاليتوس</strong>. للاستفسار المباشر: <span class="font-en text-gold font-bold" dir="ltr">0540 89 95 74</span>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Branch 1: Souk Belfort -->
+        <div id="branchCardBelfort" class="lg:col-span-6 glass-panel branch-card-active rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between gap-3">
+              <span class="px-3.5 py-1 rounded-full bg-amber-500/20 border border-gold/40 text-gold text-xs font-bold">الفرع الرئيسي الأول</span>
+              <span class="text-xs text-emerald-400 font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>مفتوح لاستقبال الأجهزة</span>
+              </span>
+            </div>
+
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-black text-white">فرع سوق بيلفور — الحراش</h3>
+              <p class="font-en text-xs text-cyan-300 mt-1">ATHENA PHONE • Souk Belfort, El Harrach, Alger</p>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              يقع في قلب سوق بيلفور الشهير للهواتف بالحراش. مجهز بورشة <span class="font-en text-white font-semibold">OCA Express</span> لفصل وكبس الزجاج الأصلي بدقة الليزر مع إمكانية الانتظار واستلام هاتفك في نفس اليوم.
+            </p>
+
+            <div class="space-y-2.5 pt-2 border-t border-white/10 text-xs sm:text-sm">
+              <div class="flex items-center gap-3 text-slate-200">
+                <span class="text-gold font-bold">📍 العنوان:</span>
+                <span>سوق بيلفور، الحراش، الجزائر العاصمة</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-200">
+                <span class="text-gold font-bold">📞 الهاتف / واتساب:</span>
+                <a href="tel:0540899574" class="font-en font-bold text-emerald-400 hover:underline" dir="ltr">0540 89 95 74</a>
+              </div>
+              <div class="flex items-center gap-3 text-slate-200">
+                <span class="text-gold font-bold">🕒 أوقات العمل:</span>
+                <span>السبت إلى الخميس (09:00 صباحاً — 19:00 مساءً)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-7 pt-5 border-t border-white/10">
+            <a href="https://maps.app.goo.gl/cVj7zFsj9NEeiZpC8" target="_blank" rel="noopener noreferrer" class="btn-gold py-3.5 px-4 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>فتح موقعنا في Google Maps</span>
+            </a>
+            <button type="button" data-focus-branch="سوق بيلفور (الحراش)" class="quick-book-branch-btn glass-panel py-3.5 px-4 rounded-2xl text-xs sm:text-sm font-bold text-white hover:text-gold flex items-center justify-center gap-2">
+              <span>احجز موعداً في فرع بيلفور</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Branch 2: Les Eucalyptus (الكاليتوس) -->
+        <div id="branchCardKallitous" class="lg:col-span-6 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between gap-3">
+              <span class="px-3.5 py-1 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold">الفرع الرئيسي الثاني</span>
+              <span class="text-xs text-emerald-400 font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>مفتوح لاستقبال الأجهزة</span>
+              </span>
+            </div>
+
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-black text-white">فرع الكاليتوس — الجزائر</h3>
+              <p class="font-en text-xs text-gold mt-1">ATHENA PHONE • Les Eucalyptus, Alger</p>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              مختبر متكامل لخدمة زبائننا في الكاليتوس والمناطق المجاورة، مزود بأحدث أجهزة الفصل الحراري والغرف المعقمة لتجديد شاشات الآيفون والسامسونج والشاشات المنحنية <span class="font-en text-white font-semibold">(Edge / Curved OLED)</span>.
+            </p>
+
+            <div class="space-y-2.5 pt-2 border-t border-white/10 text-xs sm:text-sm">
+              <div class="flex items-center gap-3 text-slate-200">
+                <span class="text-cyan-400 font-bold">📍 العنوان:</span>
+                <span>الكاليتوس، الجزائر العاصمة</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-200">
+                <span class="text-cyan-400 font-bold">📞 الهاتف / واتساب:</span>
+                <a href="tel:0540899574" class="font-en font-bold text-emerald-400 hover:underline" dir="ltr">0540 89 95 74</a>
+              </div>
+              <div class="flex items-center gap-3 text-slate-200">
+                <span class="text-cyan-400 font-bold">🕒 أوقات العمل:</span>
+                <span>السبت إلى الخميس (09:00 صباحاً — 19:00 مساءً)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-7 pt-5 border-t border-white/10">
+            <a href="https://maps.app.goo.gl/cVj7zFsj9NEeiZpC8" target="_blank" rel="noopener noreferrer" class="btn-gold py-3.5 px-4 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>فتح موقعنا في Google Maps</span>
+            </a>
+            <button type="button" data-focus-branch="الكاليتوس (الجزائر)" class="quick-book-branch-btn glass-panel py-3.5 px-4 rounded-2xl text-xs sm:text-sm font-bold text-white hover:text-gold flex items-center justify-center gap-2">
+              <span>احجز موعداً في فرع الكاليتوس</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       LUXURY FOOTER + GOOGLE SHEETS SYNC MANAGER TRIGGER
+       ======================================================================== -->
+  <footer class="border-t border-white/10 bg-[#030508] py-12 pb-24 sm:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl glass-panel-gold flex items-center justify-center font-en font-black text-gold">A</div>
+        <div>
+          <div class="font-en font-bold text-white tracking-wider">ATHENA PHONE ALGERIA</div>
+          <div class="text-xs text-slate-400">تغيير الزجاج مع الحفاظ على الشاشة الأصلية 100% بتقنية OCA — <span class="font-en text-gold" dir="ltr">0540 89 95 74</span></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+        <a href="https://maps.app.goo.gl/cVj7zFsj9NEeiZpC8" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">📍 موقعنا على Google Maps (بيلفور & الكاليتوس)</a>
+        <span>•</span>
+        <button type="button" id="openSheetsManagerBtn" class="text-slate-500 hover:text-cyan-400 transition underline">⚙️ إدارة الأسعار (Google Sheets)</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING WHATSAPP CONCIERGE BUTTON (CIRCULAR FAB ON MOBILE, PILL ON DESKTOP)
+       ======================================================================== -->
+  <a
+    href="https://wa.me/213540899574?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20ATHENA%20PHONE%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%A7%D9%84%D8%B2%D8%AC%D8%A7%D8%AC%20%D8%A8%D8%AA%D9%82%D9%86%D9%8A%D8%A9%20OCA"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp-fab w-13 h-13 sm:w-auto sm:h-auto rounded-full p-3.5 sm:px-4 sm:py-3 flex items-center justify-center gap-2.5 shadow-2xl border border-white/25"
+    title="تواصل معنا مباشرة عبر واتساب 0540899574"
+    aria-label="تواصل مع خبير ATHENA PHONE على واتساب"
+  >
+    <span class="relative flex h-2.5 w-2.5 sm:hidden">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+    </span>
+    <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.554 4.119 1.525 5.852l-1.525 5.568 5.714-1.499c1.693.922 3.633 1.447 5.696 1.447 6.627 0 12-5.373 12-12 0-6.627-5.373-12-11.41-11.368z"/>
+    </svg>
+    <span class="hidden sm:inline-block text-xs sm:text-sm font-bold font-en tracking-wider" dir="ltr">0540 89 95 74</span>
+  </a>
+
+  <!-- ========================================================================
+       GOOGLE SHEETS LIVE PRICE SYNC & CSV TEMPLATE MODAL
+       ======================================================================== -->
+  <div id="sheetsManagerModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-panel-gold rounded-3xl max-w-xl w-full p-6 sm:p-8 space-y-5 relative text-right">
+      <button type="button" id="closeSheetsManagerBtn" class="absolute top-5 left-5 w-8 h-8 rounded-full bg-white/10 text-white hover:bg-white/20 flex items-center justify-center">✕</button>
+      <div>
+        <span class="text-xs font-en text-cyan-300 font-bold">LIVE GOOGLE SHEETS SYNC</span>
+        <h3 class="text-xl sm:text-2xl font-black text-white mt-1">مزامنة الأسعار الحية عبر Google Sheets</h3>
+        <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+          عند ربط جدول Google Sheets، أي تعديل تجريه في الأسعار من هاتفك على Google Sheets يظهر **فوراً ومباشرة** لجميع زوار الموقع أونلاين دون الحاجة لإعادة رفع الموقع!
+        </p>
+      </div>
+
+      <div class="space-y-3 text-xs text-slate-300 bg-black/40 p-4 rounded-2xl border border-white/10">
+        <div class="font-bold text-amber-300">خطوات الربط في دقيقة واحدة:</div>
+        <ol class="list-decimal list-inside space-y-1.5">
+          <li>اضغط على زر <strong>"تحميل ملف الأسعار الجاهز (CSV)"</strong> بالأسفل.</li>
+          <li>افتح موقع <strong>Google Sheets</strong> وارفع الملف، ثم من قائمة <code>File &gt; Share &gt; Publish to web</code> اختر صيغة <strong>CSV</strong> وانسخ الرابط.</li>
+          <li>الصق الرابط هنا بالأسفل (أو ضعه في متغير <code>GOOGLE_SHEET_CSV_URL</code> في بداية ملف <code>script.js</code>).</li>
+        </ol>
+      </div>
+
+      <div class="space-y-2">
+        <label class="text-xs font-bold text-white block">رابط Google Sheet المنشور بصيغة CSV:</label>
+        <input
+          type="url"
+          id="customSheetUrlInput"
+          dir="ltr"
+          placeholder="https://docs.google.com/spreadsheets/d/e/.../pub?output=csv"
+          class="w-full rounded-xl bg-[#0b101b] border border-white/15 text-white px-3.5 py-2.5 text-xs font-en focus:outline-none focus:border-gold"
+        />
+      </div>
+
+      <div class="space-y-2 pt-1 border-t border-white/10">
+        <label class="text-xs font-bold text-white flex items-center justify-between">
+          <span>معرف إعلانات فيسبوك / إنستغرام (Meta Pixel ID):</span>
+          <span class="text-[10px] text-slate-400 font-en">Facebook Ads Tracking</span>
+        </label>
+        <input
+          type="text"
+          id="customPixelIdInput"
+          dir="ltr"
+          placeholder="مثال: 123456789012345"
+          class="w-full rounded-xl bg-[#0b101b] border border-white/15 text-white px-3.5 py-2.5 text-xs font-en focus:outline-none focus:border-cyan-400"
+        />
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+        <button type="button" id="downloadCsvTemplateBtn" class="glass-panel px-4 py-2.5 rounded-xl text-xs font-bold text-cyan-300 border border-cyan-400/30 hover:border-gold">
+          📥 تحميل جدول كل الأجهزة (CSV)
+        </button>
+        <button type="button" id="saveSheetUrlBtn" class="btn-gold px-5 py-2.5 rounded-xl text-xs font-bold">
+          حفظ وتحديث الأسعار الآن
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Application Script -->
+  <script src="script.js?v=3.0"></script>
+</body>
+</html>

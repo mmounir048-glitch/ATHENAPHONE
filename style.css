@@ -1,0 +1,653 @@
+/* ==========================================================================
+   ATHENA PHONE - Luxury OCA Glass Restoration Laboratory
+   Harmonized 60-30-10 Luxury Palette + Mobile-Optimized Glassmorphism
+   Base (60%): Slate Carbon #06090e / #0a101d
+   Technical Glow (30%): Electric Cyan #00f0ff / #38bdf8
+   Focal Accents (10%): Warm Amber Gold #f59e0b / #fbbf24 / #d4af37
+   Action & Savings: Emerald Green #10b981
+   ========================================================================== */
+
+:root {
+  --bg-obsidian: #06090e;
+  --bg-carbon: #0a101d;
+  --bg-card: rgba(16, 24, 40, 0.75);
+  --bg-card-hover: rgba(22, 34, 56, 0.88);
+  --cyan-electric: #00f0ff;
+  --cyan-subtle: #38bdf8;
+  --cyan-glow: rgba(0, 240, 255, 0.28);
+  --gold-amber: #f59e0b;
+  --gold-light: #fbbf24;
+  --gold-deep: #d4af37;
+  --gold-glow: rgba(245, 158, 11, 0.28);
+  --emerald-save: #10b981;
+  --emerald-glow: rgba(16, 185, 129, 0.35);
+  --crimson-crack: #ef4444;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-cyan: rgba(0, 240, 255, 0.35);
+  --border-gold: rgba(212, 175, 55, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-obsidian);
+  color: #f8fafc;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  overflow-x: hidden;
+  padding-bottom: 96px; /* Safe area padding so floating actions never block content */
+}
+
+@media (min-width: 640px) {
+  body {
+    padding-bottom: 40px;
+  }
+}
+
+::selection {
+  background: var(--gold-amber);
+  color: #06090e;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #00f0ff 100%);
+  border-radius: 9999px;
+}
+
+/* Horizontal Touch Scroll Utility (No Scrollbar) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Typography Helpers */
+.font-en {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Cairo', sans-serif;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fffbeb 0%, #fbbf24 35%, #f59e0b 70%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #e0ffff 0%, #38bdf8 45%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-luxury {
+  background: linear-gradient(120deg, #ffffff 0%, #fef3c7 35%, #f59e0b 65%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-apple {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ambient Background & Grid */
+.bg-luxury-grid {
+  background-size: 44px 44px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.02) 1px, transparent 1px);
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Sticky Header Scroll Classes */
+#mainAppHeader {
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#mainAppHeader.header-hidden {
+  transform: translateY(-100%);
+}
+
+#mainAppHeader.header-visible {
+  transform: translateY(0);
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 240, 255, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 240, 255, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.apple-bento-card {
+  background: radial-gradient(120% 120% at 50% 0%, rgba(26, 38, 62, 0.55) 0%, rgba(10, 16, 29, 0.92) 100%);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apple-bento-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.38);
+  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.78), 0 0 35px rgba(212, 175, 55, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.glass-panel-gold {
+  background: linear-gradient(145deg, rgba(28, 24, 15, 0.8) 0%, rgba(12, 18, 30, 0.92) 100%);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px rgba(245, 158, 11, 0.1);
+}
+
+.glass-panel-cyan {
+  background: linear-gradient(145deg, rgba(8, 28, 42, 0.8) 0%, rgba(10, 16, 29, 0.94) 100%);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid var(--border-cyan);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 240, 255, 0.1);
+}
+
+/* Luxury Focal Action Buttons (10% Gold Accent) */
+.btn-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 55%, #d4af37 100%);
+  color: #06090e;
+  font-weight: 800;
+  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(30deg);
+  transition: all 0.65s ease;
+}
+
+.btn-gold:hover::after {
+  left: 130%;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Emerald Green Booking & Lead Conversion */
+.btn-whatsapp {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(16, 185, 129, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Floating WhatsApp Button: Mobile Circular FAB vs Desktop Pill */
+.floating-whatsapp-fab {
+  position: fixed;
+  z-index: 50;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  left: 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  box-shadow: 0 12px 35px rgba(16, 185, 129, 0.45), 0 0 0 2px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-whatsapp-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 18px 45px rgba(16, 185, 129, 0.65), 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+/* ==========================================================================
+   BEFORE & AFTER INTERACTIVE SCREEN RESTORATION SLIDER (MOBILE OPTIMIZED)
+   ========================================================================== */
+
+.restoration-stage {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.phone-chassis {
+  position: relative;
+  width: 326px;
+  height: 660px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 52px;
+  padding: 10px;
+  background: linear-gradient(145deg, #334155 0%, #172033 35%, #0b111d 70%, #25334a 100%);
+  box-shadow:
+    0 30px 75px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(0, 240, 255, 0.25),
+    0 0 45px rgba(0, 240, 255, 0.12),
+    inset 0 0 4px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .phone-chassis {
+    width: 290px;
+    height: 590px;
+    border-radius: 46px;
+    padding: 8px;
+  }
+}
+
+/* Titanium Side Buttons */
+.phone-btn-right {
+  position: absolute;
+  right: -3px;
+  top: 155px;
+  width: 3px;
+  height: 72px;
+  background: linear-gradient(180deg, #d4af37, #64748b);
+  border-radius: 0 4px 4px 0;
+}
+
+.phone-btn-left-1 {
+  position: absolute;
+  left: -3px;
+  top: 115px;
+  width: 3px;
+  height: 30px;
+  background: linear-gradient(180deg, #d4af37, #64748b);
+  border-radius: 4px 0 0 4px;
+}
+
+.phone-btn-left-2 {
+  position: absolute;
+  left: -3px;
+  top: 160px;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(180deg, #d4af37, #64748b);
+  border-radius: 4px 0 0 4px;
+}
+
+.phone-btn-left-3 {
+  position: absolute;
+  left: -3px;
+  top: 220px;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(180deg, #d4af37, #64748b);
+  border-radius: 4px 0 0 4px;
+}
+
+.phone-screen-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 42px;
+  overflow: hidden;
+  background: #04060a;
+  cursor: ew-resize;
+}
+
+@media (max-width: 480px) {
+  .phone-screen-viewport {
+    border-radius: 38px;
+  }
+}
+
+/* Dynamic Island */
+.dynamic-island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 104px;
+  height: 28px;
+  background: #000000;
+  border-radius: 999px;
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), inset 0 0 2px rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 480px) {
+  .dynamic-island {
+    top: 9px;
+    width: 90px;
+    height: 24px;
+    padding: 0 8px;
+  }
+}
+
+.island-lens {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2563eb 0%, #080d1a 60%, #000 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.island-sensor {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.9) 0%, rgba(16, 185, 129, 0.1) 70%);
+  animation: pulseGlow 2s infinite;
+}
+
+/* Base Layer: AFTER (Flawless Original OLED) */
+.screen-layer-after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(212, 175, 55, 0.35) 0%, transparent 52%),
+    radial-gradient(circle at 80% 65%, rgba(0, 240, 255, 0.32) 0%, transparent 55%),
+    radial-gradient(circle at 20% 78%, rgba(56, 189, 248, 0.3) 0%, transparent 50%),
+    linear-gradient(165deg, #060a14 0%, #0b1426 45%, #080c18 100%);
+  z-index: 10;
+}
+
+/* Oleophobic Gloss Shine on After Layer */
+.oleophobic-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.02) 28%,
+    transparent 45%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Top Layer: BEFORE (Shattered Outer Glass Over Working OLED) */
+.screen-layer-before {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  clip-path: inset(0 0 0 50%);
+  will-change: clip-path;
+}
+
+.cracked-glass-tint {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 72% 32%, rgba(255, 255, 255, 0.2) 0%, rgba(239, 68, 68, 0.07) 25%, transparent 55%),
+    radial-gradient(circle at 28% 72%, rgba(255, 255, 255, 0.15) 0%, transparent 45%),
+    rgba(15, 23, 42, 0.22);
+  backdrop-filter: blur(0.5px) contrast(0.96);
+}
+
+.crack-svg-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.35));
+}
+
+/* Laser Divider Beam & Handle */
+.slider-laser-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #00f0ff 0%, #ffffff 50%, #f59e0b 100%);
+  box-shadow:
+    0 0 14px #00f0ff,
+    0 0 26px #00f0ff,
+    0 0 38px rgba(245, 158, 11, 0.75);
+  z-index: 30;
+  pointer-events: none;
+  will-change: left;
+}
+
+.slider-laser-flare {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.12) 0%, rgba(0, 240, 255, 0.22) 50%, rgba(16, 185, 129, 0.12) 100%);
+  pointer-events: none;
+  z-index: 29;
+}
+
+.slider-handle-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #1e293b, #090d16);
+  border: 2px solid #00f0ff;
+  box-shadow:
+    0 0 20px rgba(0, 240, 255, 0.65),
+    0 0 0 4px rgba(0, 240, 255, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.8);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: ew-resize;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@media (max-width: 480px) {
+  .slider-handle-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.slider-handle-btn:hover,
+.slider-handle-btn.dragging {
+  transform: translate(-50%, -50%) scale(1.12);
+  border-color: #fbbf24;
+  box-shadow:
+    0 0 25px rgba(245, 158, 11, 0.85),
+    0 0 0 6px rgba(245, 158, 11, 0.2),
+    0 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   DYNAMIC 4-STEP OCA RESTORATION WORKBENCH
+   ========================================================================== */
+
+.workbench-step-tab {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.workbench-step-tab.active {
+  background: linear-gradient(145deg, rgba(14, 34, 52, 0.95) 0%, rgba(10, 20, 36, 0.98) 100%);
+  border-color: var(--cyan-electric);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 240, 255, 0.2);
+}
+
+.workbench-step-tab.active .step-num-pill {
+  background: linear-gradient(135deg, #00f0ff 0%, #38bdf8 100%);
+  color: #06090e;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5);
+}
+
+/* Workbench Stage Visual Canvas Animations */
+@keyframes wireSlideHoriz {
+  0% { left: 0%; opacity: 0.7; }
+  50% { left: 100%; opacity: 1; }
+  100% { left: 0%; opacity: 0.7; }
+}
+
+.anim-wire-slide {
+  animation: wireSlideHoriz 3.2s ease-in-out infinite;
+}
+
+@keyframes glueWipeEffect {
+  0% { width: 0%; opacity: 0.2; }
+  50% { width: 100%; opacity: 0.9; }
+  100% { width: 0%; opacity: 0.2; }
+}
+
+.anim-glue-wipe {
+  animation: glueWipeEffect 3s ease-in-out infinite;
+}
+
+@keyframes bubblePop {
+  0% { transform: scale(1) translateY(0); opacity: 0.8; }
+  50% { transform: scale(0.6) translateY(-15px); opacity: 0.4; }
+  100% { transform: scale(0) translateY(-30px); opacity: 0; }
+}
+
+.anim-bubble-dissolve {
+  animation: bubblePop 2.5s ease-in-out infinite;
+}
+
+@keyframes gaugeNeedlePulse {
+  0%, 100% { transform: rotate(-35deg); }
+  50% { transform: rotate(45deg); }
+}
+
+.anim-gauge-needle {
+  transform-origin: bottom center;
+  animation: gaugeNeedlePulse 2.8s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+/* Brand & Series Filter Horizontal Touch Row */
+.brand-tab {
+  flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-tab.active {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #06090e;
+  border-color: transparent;
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);
+}
+
+.subseries-pill {
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.subseries-pill.active {
+  background: rgba(0, 240, 255, 0.16);
+  color: #38bdf8;
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.18);
+}
+
+.gen-pill {
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.gen-pill.active {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.22);
+}
+
+/* Model Card Selection State */
+.model-option-btn.active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(0, 240, 255, 0.12) 100%);
+  border-color: #f59e0b;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+/* Branch Cards */
+.branch-card-active {
+  border-color: rgba(245, 158, 11, 0.6) !important;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.72), 0 0 35px rgba(245, 158, 11, 0.14) !important;
+}
+
+/* Diagnostic Quiz Buttons */
+.diag-choice-btn.selected-yes {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+  color: #6ee7b7;
+}
+
+.diag-choice-btn.selected-no {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #fca5a5;
+}
